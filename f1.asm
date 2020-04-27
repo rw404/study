@@ -1,9 +1,6 @@
-extern printf
 section .data
   a dq 3.0
   b dq 1.0
-section .rodata
-  lc0 db "%f", 0
 section .text
 global f1
 f1:
