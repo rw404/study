@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-extern float f1();
+extern float f3();
 
 int main(void)
 {
-        float a = 2.0;
-        printf("%f", f1(a));
+        float a = 1.0;
+        printf("%f", f3(a));
         return 0;
 }
