@@ -19,5 +19,5 @@ df3.o: df3.asm
 				nasm -f elf32 -o df3.o df3.asm
 deb.o: threefuncs.h deb.c
 				gcc -c -o deb.o deb.c -m32
-clean: $(OBJS) programm
-				rm -f $(OBJS) programm
+clean: $(OBJS) programm deb.o
+				rm -f $(OBJS) programm deb.o
