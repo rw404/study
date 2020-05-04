@@ -1,10 +1,9 @@
 #include <stdio.h>
-
-extern float f3();
+#include "threefuncs.h"
 
 int main(void)
 {
         float a = 1.0;
-        printf("%f", f3(a));
+        printf("%f\n%f\n%f\n%f\n%f\n%f\n",f1(a), f2(a), f3(a), df1(a), df2(a), df3(a));
         return 0;
 }
