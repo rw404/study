@@ -1,17 +1,28 @@
+extern _GLOBAL_OFFSET_TABLE_                                ;for PIC
 section .data
-  a dq 0.5             ;radical term
+  a dq 0.5                                                  ;radical term
 section .text
-global f2
+global f2:function
 f2:
   push ebp
-  mov ebp, esp
-  sub esp, 8
+  mov ebp, esp 
   finit
+  push ebx
 
-  fld qword[ebp+8]     ;x
-  fadd qword[a]        ;x+0.5
-  fsqrt                ;sqrt(x+0.5)
+  push ebx
+  call .get_GOT
 
+.get_GOT:
+  pop ebx
+  add ebx, _GLOBAL_OFFSET_TABLE_+$$-.get_GOT wrt ..gotpc
+
+  fld qword[ebp+8]                                          ;x
+  
+  lea eax, [ebx+a wrt ..gotoff]
+  fadd qword[eax]                                           ;x+0.5 in ST0
+  fsqrt                                                     ;sqrt(x+0.5) in ST0
+  
+  pop ebx
   leave
   ret
 

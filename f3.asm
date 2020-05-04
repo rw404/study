@@ -1,10 +1,7 @@
-extern _GLOBAL_OFFSET_TABLE_
-extern __x86.get_pc_thunk.bx
+extern _GLOBAL_OFFSET_TABLE_                                ;for PIC
 section .data
-  a dq -1.0            ;to neg elements
-  del dq 2.0           ;using in loop to mult [helper]
-  helper dq 1.0        ;2^[-x]; [-x] - whole part of -x
-  flag dq 0.0          ;to cmp -x with zero
+  del dq 2.0                                                ;using in loop to mult [helper]
+  helper dq 1.0                                             ;2^[-x]; [-x] - whole part of -x
 section .text
 global f3:function
 f3:
@@ -12,93 +9,85 @@ f3:
   mov ebp, esp
   sub esp, 8
   push ebx
- 
+  
+  push ebx
   call .get_GOT
 
 .get_GOT:
   pop ebx 
-  add ebx, _GLOBAL_OFFSET_TABLE_+$$-.get_GOT wrt ..gotpc
+  add ebx, _GLOBAL_OFFSET_TABLE_+$$-.get_GOT wrt ..gotpc    ;get GOT in ebx
 
-  mov ecx, 0           ;flag of x's sign
+  mov ecx, 0                                                ;flag of x's sign
   finit
 
-  fld qword[ebp+8]     ;x
-  
-  lea eax, [ebx+a wrt ..gotoff]
-  fmul qword[eax]        ;-x
-  fldl2e               ;log2 e
-  fmulp                ;log2 e^-x; pop log2 e
+  fld qword[ebp+8]                                          ;x
  
-  fstp qword[esp]      ;result in [esp]; stack is empty
-  
-  lea eax, [ebx+flag wrt ..gotoff]
-  fld qword[eax]      ;ST1
-  fld qword[esp]       ;ST0
-  fucomip st1          ;ST0 vs ST1; pop [esp]
-  
-  lea eax, [ebx+.dontchangeflag wrt ..gotoff]
-  jnc .dontchangeflag wrt ..gotoff ;if st0>=0 -> don't change
+  fchs                                                      ;-x
+  fldl2e                                                    ;log2 e
+  fmulp                                                     ;log2 e^-x; pop log2 e
  
-  mov ecx, 1           ;if st0<0 flag = 1
+  fstp qword[esp]                                           ;result in [esp]; stack is empty
+
+  mov edx, 1                                                ;prepare for x's sign changing 
   
-.dontchangeflag:
-  fstp                 ;stack is empty  
+  fldz                                                      ;zero in ST0
+  fld qword[esp]                                            ;log2 e^-x in ST0; zero in ST1
+  fucomip st1                                               ;ST0 vs ST1; pop [esp]
+ 
+  cmovc ecx, edx                                            ;if st0<0 flag = 1
+  
+  fstp                                                      ;stack is empty  
   fld qword[esp]       
-  fabs                 ;|log2 e^-x|
+  fabs                                                      ;|log2 e^-x|
 
-.L1:
+.L1:                                                        ;LOOP: while(|log2 e^-x|>1) [helper] *= 2, |log2 e^-x|--;
   
-  fstp qword[esp]      ;result in [esp]
-  fld1                 ;ST1
-  fld qword[esp]       ;ST0
+  fstp qword[esp]                                           ;result in [esp]; stack is empty
+  fld1                                                      ;1 in ST0
+  fld qword[esp]                                            ;[esp] in ST0; 1 in ST1
 
-  fucomip st1          ;ST0 vs ST1; pop [esp]
-  fstp                 ;pop 1 from stack; stack is empty
-  fld qword[esp]
+  fucomip st1                                               ;ST0 vs ST1; pop [esp]
+  fstp                                                      ;pop 1 from stack; stack is empty
+  fld qword[esp]                                            ;[esp] in ST0
 
-  lea eax, [ebx+.result wrt ..gotoff]
-  jbe .result wrt ..gotoff         ;if [esp] <= 1 jump to result
+  jbe .result wrt ..gotoff                                  ;if [esp] <= 1 jump to result
   
   lea eax, [ebx+helper wrt ..gotoff]
-  fld qword[eax]       ;else
+  fld qword[eax]                                            ;else [helper] in ST0
   lea eax, [ebx+del wrt ..gotoff]
-  fmul qword[eax]      ;[helper] = [helper] * 2
-  
+  fmul qword[eax]                                           ;[helper] * 2 in ST0
   lea eax, [ebx+helper wrt ..gotoff]
-  fstp qword[eax]
+  fstp qword[eax]                                           ;pop [helper]*2 in [helper]
   
-  fld1                 ;ST1  = [esp]-1
-
+  fld1                                                      ;[esp]--
   fsubp 
 
-  lea eax, [ebx+.L1 wrt ..gotoff]
   jmp .L1 wrt ..gotoff
 
-.result:
+.result:                                                    ;if (log2 e^-x < 0) [helper] = 1/[helper]
   cmp ecx, 1 
   
-  jb .end wrt ..gotoff              ;if log2 e^-x >= 0 jump to .end
+  jb .end wrt ..gotoff                                      ;else jump to .end
   
-  fld1                 ;else [helper] = 1/[helper]
+  fld1                                                      ;1 in ST0
   lea eax, [ebx+helper wrt ..gotoff]
-  fld qword[eax]
-  fdivp 
-  fstp qword[eax]
+  fld qword[eax]                                            ;[helper] in ST0; 1 in ST1
+  fdivp                                                     ;1/[helper] in ST1; pop [helper]; 1/[helper] in ST0 
+  fstp qword[eax]                                           ;pop 1/[helper] in [helper]
 
-  lea eax, [ebx+a wrt ..gotoff]
-  fmul qword[eax]        ;ST0 = [esp]* -1; result after loop
+  fchs                                                      ;ST0 = [esp]* -1; result after loop
  
-.end:
+.end:                                                       ;answer is 2^[esp] * 2^k, 2^k = [helper], k+[esp]=log2 e^-x
 
-  f2xm1                ;-1 <= ST0 <= 1; ST0 = 2^ST0 - 1
-  fld1
+  f2xm1                                                     ;-1 <= ST0 <= 1; ST0 = 2^[esp] - 1
+  fld1                                                      ;1 in ST0; 2^[esp]-1 in ST1
 
-  faddp                ;ST0++; in ST0 2^result_after_loop
+  faddp                                                     ;ST0++; 2^[esp] in ST0
   
   lea eax, [ebx+helper wrt ..gotoff]
-  fmul qword[eax]   ;ST0 = [helper] * ST0 = e^-x 
+  fmul qword[eax]                                           ;ST0 = [helper] * ST0 = e^-x
   
-  pop ebx
+  pop ebx 
   leave 
   ret
   
