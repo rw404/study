@@ -4,3 +4,6 @@ extern float f3();
 extern float df1();
 extern float df2();
 extern float df3();
+extern float d2f1();
+extern float d2f2();
+extern float d2f3();

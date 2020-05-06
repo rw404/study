@@ -1,15 +1,107 @@
 #include <stdio.h>
 #include "threefuncs.h"
 #include <getopt.h>
+#include <stdlib.h>
+#include <math.h>
 
-float root(float (*f)(), float (*g)(), float a, float b, float eps1){
-  if((g==(&f2) || f == (&f2))&& a<0.5){ 
-    printf("The point does not belong to the scope of the function definition\n");
-    return (float)-1;
+static int printx = 0;
+static int iters = 0;
+
+double sqrt(double);
+
+static float* root(float (*f)(), float (*g)(), float a, float b, float eps1)
+{
+  if(a>b)
+  {
+    float helper = a;
+    a = b;
+    b = helper;
+  }  
+  if((g==(&f2) || f==(&f2)) && a<0.5){ 
+    printf("The point %f does not belong to the scope of the function definition\n", a);
+    return NULL;
   }
-  float r = 0.0;
-  return r;
+  float (*df)(),(*dg)();
+  if(f==(&f1)) df=(&df1);
+  else if(f==(&f2)) df=(&df2);
+  else df=(&df3);
+  
+  if(g==(&f1)) dg=(&df1);
+  else if(g==(&f2)) dg=(&df2);
+  else dg=(&df3);
+ 
+  if((((*df)(a)-(*dg)(a))*((*df)(b)-(*dg)(b)))<=0 || (((*f)(a)-(*g)(a))*((*f)(b)-(*g)(b)))>0)
+  {
+    printf("The root cannot be calculated on this segment\n");
+    return NULL;
+  } 
+
+  float *ans = (float*)calloc(1,sizeof(float));
+
+  ans[0] = a;//starting position
+ 
+  while(((*f)(ans[iters])-(*g)(ans[iters]))*((*f)(ans[iters]+eps1)-(*g)(ans[iters]+eps1))>0)
+  {
+    ans = (float*)realloc(ans, (iters+2)*sizeof(float));
+    
+    ans[iters+1] = ans[iters] - ((*f)(ans[iters])-(*g)(ans[iters]))/((*df)(ans[iters])-(*dg)(ans[iters]));
+    iters++;
+    if(ans[iters]<ans[iters-1])
+    {
+      iters = 0;
+      free(ans);
+      printf("The root cannot be calculated on this segment\n");
+      return NULL;
+    }
+    
+  }
+
+  return ans;
 }
+
+static float integrlal(float (*f)(), float a, float b, float eps2)
+{
+  if(a>b)
+  {
+    float helper = a;
+    a = b;
+    b = helper;
+  }
+  if(f==(&f2) && a<0.5)
+  { 
+    printf("The point %f does not belong to the scope of the function definition\n", a);
+    return 0;
+  }
+  
+  //(b-a)^3/24n^2 d2f(x) <= eps2 => n = sqrt((b-a)^3 d2f(x)/eps2 * 24)
+  float (*d2f)();
+  if(f==(&f1)) d2f=(&d2f1);
+  else if(f==(&f2)) d2f=(&d2f2);
+  else d2f=(&d2f3);
+
+  float rezult = (b-a)*(b-a)*(b-a)*(*d2f)((a+b)/2);
+  rezult = rezult/24;
+  rezult = rezult /eps2;
+  int n = (int)sqrt(rezult);
+
+  float ans = 0;
+  float tmp = (b-a)/n;
+  tmp = tmp/2;
+  for(int i = 1; i < 2*n; i+=2)
+  {
+    ans += (*f)(a+tmp*i);
+  }
+  
+  return ans;
+}
+
+
+
+
+
+
+
+
 
 int main(int argc, char *argv[])
 { 
@@ -66,10 +158,27 @@ int main(int argc, char *argv[])
      }
      option_index=-1;
   }
-  float a = 1.0;
-  float b = -1.0;
-  printf("%f\n%f\n", root(&f1, &f3,b, a, eps1), root(&f2, &f1, b, a, eps1));
-  
-  printf("%f\n%f\n%f\n%f\n%f\n%f\n",f1(a), f2(a), f3(a), df1(a), df2(a), df3(a));
+
+
+
+
+
+
+
+
+
+  float a = 3.0;
+  float b = 1.8;
+  //printf("%f\n%f\n", root(&f1, &f3,b, a, eps1), root(&f2, &f1, b, a, eps1));
+  float* ans = NULL;
+  ans = root(&f1, &f2, b, a, eps1);
+  float a1 = ans[iters];
+  iters = 0;
+  float *ans2 = root(&f1, &f3, -1.0, 1.0, eps1);
+  float b1 = ans2[iters];
+  float res = integral((&f1), a1, b1, eps1);
+
+
+  printf("%f\n%f\n%f\n%f\n%f\n%f\n\n%f\n%f\n",f1(a), f2(a), f3(a), df1(a), df2(a), df3(a), ans[iters], res);
   return 0;
 }
