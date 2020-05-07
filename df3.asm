@@ -17,6 +17,10 @@ df3:
   pop ebx 
   add ebx, _GLOBAL_OFFSET_TABLE_+$$-.get_GOT wrt ..gotpc    ;get GOT in ebx
 
+  lea eax,[ebx+helper wrt ..gotoff]
+  fld1
+  fstp qword[eax]                                           ;helper is global, [helper]=1
+
   mov ecx, 0                                                ;flag of x's sign
   finit
 

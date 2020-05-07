@@ -1,13 +1,17 @@
 extern _GLOBAL_OFFSET_TABLE_                                ;for PIC
+extern printf
 section .data
   del dq 2.0                                                ;using in loop to mult [helper]
   helper dq 1.0                                             ;2^[-x]; [-x] - whole part of -x
+section .rodata
+  LC0 db "%f",0
 section .text
 global f3:function
 f3:
   push ebp
   mov ebp, esp
-  sub esp, 8
+  sub esp, 16
+  and esp, 0xfffffff0
   push ebx
   
   push ebx
@@ -16,6 +20,10 @@ f3:
 .get_GOT:
   pop ebx 
   add ebx, _GLOBAL_OFFSET_TABLE_+$$-.get_GOT wrt ..gotpc    ;get GOT in ebx
+
+  lea eax, [ebx+helper wrt ..gotoff]
+  fld1
+  fstp qword[eax]                                           ;[helper] = 1
 
   mov ecx, 0                                                ;flag of x's sign
   finit
@@ -74,11 +82,10 @@ f3:
   fld qword[eax]                                            ;[helper] in ST0; 1 in ST1
   fdivp                                                     ;1/[helper] in ST1; pop [helper]; 1/[helper] in ST0 
   fstp qword[eax]                                           ;pop 1/[helper] in [helper]
-
+  
   fchs                                                      ;ST0 = [esp]* -1; result after loop
  
 .end:                                                       ;answer is 2^[esp] * 2^k, 2^k = [helper], k+[esp]=log2 e^-x
-
   f2xm1                                                     ;-1 <= ST0 <= 1; ST0 = 2^[esp] - 1
   fld1                                                      ;1 in ST0; 2^[esp]-1 in ST1
 
