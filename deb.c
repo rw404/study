@@ -9,7 +9,7 @@ static int iters = 0;
 
 
 
-static float* root(float (*f)(), float (*g)(), float a, float b, float eps1)
+static float root(float (*f)(), float (*g)(), float a, float b, float eps1)//TODO:float instead of float*
 {
   if(a>b)
   {
@@ -17,9 +17,9 @@ static float* root(float (*f)(), float (*g)(), float a, float b, float eps1)
     a = b;
     b = helper;
   }  
-  if((g==(&f2) || f==(&f2)) && a<0.5){ 
+  if((g==(&f2) || f==(&f2)) && a<-0.5){ 
     printf("The point %f does not belong to the scope of the function definition\n", a);
-    return NULL;
+    return -10;
   }
   float (*df)(),(*dg)();
   if(f==(&f1)) df=(&df1);
@@ -33,25 +33,22 @@ static float* root(float (*f)(), float (*g)(), float a, float b, float eps1)
   if((((*df)(a)-(*dg)(a))*((*df)(b)-(*dg)(b)))<=0 || (((*f)(a)-(*g)(a))*((*f)(b)-(*g)(b)))>0)
   {
     printf("The root cannot be calculated on this segment\n");
-    return NULL;
+    return -10;
   } 
   printf("Yes");
-  float *ans = (float*)calloc(1,sizeof(float));
-
-  ans[0] = a;//starting position
+  float ans = a;//starting position
  
-  while(((*f)(ans[iters])-(*g)(ans[iters]))*((*f)(ans[iters]+eps1)-(*g)(ans[iters]+eps1))>0)
+  while(((*f)(ans)-(*g)(ans))*((*f)(ans+eps1)-(*g)(ans+eps1))>0)
   {
-    ans = (float*)realloc(ans, (iters+2)*sizeof(float));
-    
-    ans[iters+1] = ans[iters] - ((*f)(ans[iters])-(*g)(ans[iters]))/((*df)(ans[iters])-(*dg)(ans[iters]));
+    //ans = (float*)realloc(ans, (iters+2)*sizeof(float));
+    float tmp = ans;
+    ans = ans - ((*f)(ans)-(*g)(ans))/((*df)(ans)-(*dg)(ans));
     iters++;
-    if(ans[iters]<ans[iters-1])
+    if(ans<tmp)
     {
       iters = 0;
-      free(ans);
       printf("The root cannot be calculated on this segment\n");
-      return NULL;
+      return -10;
     }
     
   }
@@ -67,7 +64,7 @@ static float integral(float (*f)(), float a, float b, float eps2)
     a = b;
     b = helper;
   }
-  if(f==(&f2) && a<0.5)
+  if(f==(&f2) && a<-0.5)
   { 
     printf("The point %f does not belong to the scope of the function definition\n", a);
     return 0;
@@ -79,7 +76,18 @@ static float integral(float (*f)(), float a, float b, float eps2)
   else if(f==(&f2)) d2f=(&d2f2);
   else d2f=(&d2f3);
 
-  float rezult = (b-a)*(b-a)*(b-a)*(*d2f)((a+b)/2);
+  float d2 = (*d2f)((a+b)/2);
+  float y = (a+b)/2;
+  float res = y;
+  while(d2 == 0)
+  {
+    y = y / 2;
+    d2 = (*d2f)(res + y);
+  }
+  if(d2<0) d2 = -d2;
+
+  
+  float rezult = (b-a)*(b-a)*(b-a)*d2;
   rezult = rezult/24;
   rezult = rezult /eps2;
   int n = (int)f2(rezult-0.5) + 1;
@@ -172,14 +180,19 @@ int main(int argc, char *argv[])
   float a = 3.0;
   float b = 1.8;
   //printf("%f\n%f\n", root(&f1, &f3,b, a, eps1), root(&f2, &f1, b, a, eps1));
-  float* ans = NULL;
+  float ans = 0;
   ans = root(&f1, &f2, b, a, eps1);
-  float a1 = ans[iters];
-  //iters = 0;
-  //float *ans2 = root(&f1, &f3, -1.0, 1.0, eps1);
+  float a1 = ans;
+  iters = 0;
+  float ans2 = root(&f1, &f3, -1.0, 1.0, eps1);
   //float b1 = ans2[iters];
-  float res = (float)integral((&f3), -1.0, 1.0, eps1);
+  float res; //= (float)integral((&f3), -1.0, 1.0, eps1);
+  float ans3 = root(&f2, &f3, 0, 1, eps1);
+  
+  res = integral((&f1), ans, ans2, eps1);
+  //res = res - integral(&f2, ans, ans3, eps1);
+  //res = res - integral(&f3, ans2, ans3, eps1);
 
-  printf("%f\n%f\n%f\n%f\n%f\n%f\n\n%f\n%f\n",f1(a), f2(a), f3(a), df1(a), df2(a), df3(a), a1, res);
+  printf("%f\n%f\n%f\n%f\n%f\n%f\n\n%f\n%f\n%f\n%f\n",f1(a), f2(a), f3(a), df1(a), df2(a), df3(a), a1, res, ans2, ans3);
   return 0;
 }
