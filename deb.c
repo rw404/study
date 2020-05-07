@@ -90,10 +90,10 @@ static float integral(float (*f)(), float a, float b, float eps2)
   for(int i = 1; i < 2*n; i+=2)
   {
     ans += (*f)(a+tmp*i);
-    float h = a + tmp * (float)i;
-    printf("%f\n", f3(h)); 
+    //printf("%f\n\n%f\n\n", (*f)(a+tmp*i), ans); 
   }
   printf("\n");
+  ans = ans*tmp*2;
   return ans;
 }
 
@@ -173,14 +173,13 @@ int main(int argc, char *argv[])
   float b = 1.8;
   //printf("%f\n%f\n", root(&f1, &f3,b, a, eps1), root(&f2, &f1, b, a, eps1));
   float* ans = NULL;
-  //ans = root(&f1, &f2, b, a, eps1);
-  //float a1 = ans[iters];
+  ans = root(&f1, &f2, b, a, eps1);
+  float a1 = ans[iters];
   //iters = 0;
   //float *ans2 = root(&f1, &f3, -1.0, 1.0, eps1);
   //float b1 = ans2[iters];
-  //float res = (float)integral((&f3), -1.0, 1.0, eps1);
+  float res = (float)integral((&f3), -1.0, 1.0, eps1);
 
-  printf("%f\n%f\n", f3(-0.94736), f3(-0.84210));
-  //printf("%f\n%f\n%f\n%f\n%f\n%f\n\n%f\n%f\n",f1(a), f2(a), f3(-0.94736), df1(a), df2(a), df3(a), ans[iters], res);
+  printf("%f\n%f\n%f\n%f\n%f\n%f\n\n%f\n%f\n",f1(a), f2(a), f3(a), df1(a), df2(a), df3(a), a1, res);
   return 0;
 }
