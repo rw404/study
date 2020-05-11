@@ -54,7 +54,7 @@ static float root(float (*f)(), float (*g)(), float a, float b, float eps1)     
   {                                                                                                               //has the same sign as the variable itselfi,
     ans = ans - ((*f)(ans)-(*g)(ans))/((*df)(ans)-(*dg)(ans));                                                    //the root is not found
 
-    iters++;                                                                                                      //Each time iters grows
+    iters++;                                                                                                      //Each time iters grows 
     if(ans<tmp)                                                                                                   //If the derivative has changed its sign, stop working
     {
       iters = 0;
@@ -145,6 +145,7 @@ int main(int argc, char *argv[])
   char repeat = 'n';                                                                                              //Reply if you want to test  again
   float testing_argument;                                                                                         //Argument of the testing function(1, 2, 3)
   float testing_result;                                                                                           //Testing result
+  int flag = 0;                                                                                                   //Flag to determine that loop has already been completed
 
   float res;                                                                                                      //Result of programm
   float ans1;                                                                                                     //root of f1 = f2
@@ -171,14 +172,16 @@ int main(int argc, char *argv[])
           if(option_index==-1)                                                                                    //Please enter a long option
             printf("Please enter --help to get more information\n");
           else                                                                                                    //Describing the options
-            printf("Commands:\n\t\
-            --test to enter testing mode\n\t\
-            --absc to allow abscissa's printing\n\t\
-            --iters to print number of iterations to calculate the root\n\t");
+            printf("Commands:\n\t--test to enter testing mode\n\t--absc to allow abscissa's printing\n\t--iters to print number of iterations to calculate the root\n");
                                            
           return 0;                                                                                               //After --help/-h programm stops
         }
-        case 'a': printx = 1;                                                                                     //Allowing to print roots
+        case 'a': 
+        {
+          if(option_index != -1)
+            printx = 1;                                                                                           //Allowing to print roots
+          break;
+        }
         case 't':                                                                                                 //Testing mode
         {
           printf("You need to enter the function number, r or i\n");                                              //Please enter the number or the first letter of function
@@ -187,7 +190,9 @@ int main(int argc, char *argv[])
           {   
             printf("Which function you want to test(1, 2, 3, r, i)?: ");
             scanf("%c", &TESTING_FUNCTION);                                                                       //Testing function
-              
+            
+            if(flag == 1) scanf("%c", &TESTING_FUNCTION);                                                         //TESTING_FUNCTION != \n
+
               switch (TESTING_FUNCTION)
               {
                 case 'r':                                                                                         //Root function
@@ -195,7 +200,7 @@ int main(int argc, char *argv[])
                   do                                                                                              //Repeat, while answer to repeat is 'y'
                   { 
                     printf("Enter the number of the first function(f): ");
-                    scanf("%d\n", &num1);
+                    scanf("%d", &num1);
 
                     switch(num1)                                                                                  //Defining the function to test
                     {
@@ -216,14 +221,14 @@ int main(int argc, char *argv[])
                       }
                       default:
                       {
-                        printf("Function number %d does not exist.\n");                                           //If number is invalid, testing mode returns the error
+                        printf("Function number %d does not exist.\n", num1);                                     //If number is invalid, testing mode returns the error
                         testingfunction1 = NULL;
                         break;
                       }
                     }
 
                     printf("Enter the number of the second function(g): ");
-                    scanf("%d\n", num2);
+                    scanf("%d", &num2);
                     
                     switch(num2)                                                                                  //Defying the function to test
                     {
@@ -244,36 +249,37 @@ int main(int argc, char *argv[])
                       }
                       default:
                       {
-                        printf("Function number %d does not exist.\n");                                           //If number is invalid, testing mode returns the error
+                        printf("Function number %d does not exist.\n", num2);                                     //If number is invalid, testing mode returns the error
                         testingfunction2 = NULL;
                         break;
                       }
                     }
  
                     printf("Enter the first border of the segment(a): ");                                         //Segment boundaries
-                    scanf("%f\n", &testinga);
+                    scanf("%f", &testinga);
                     
                     printf("Enter the second border of the segment(b): ");
-                    scanf("%f\n", &testingb);
+                    scanf("%f", &testingb);
                     
                     printf("Enter the epsilon: ");                                                                //Epsilon
-                    scanf("%f\n", &testingeps);
+                    scanf("%f", &testingeps);
                     
                     if(testingfunction2 != NULL && testingfunction1 != NULL)                                      //If there is no errors, calculate the root
                     {
-                      testing_reult = root(testingfunction1, testingfunction2, testinga, testingb, testingeps);   
+                      testing_result = root(testingfunction1, testingfunction2, testinga, testingb, testingeps);   
 
                       if(testing_result != -10)                                                                   //Сhecking for errors
-                        printf("The root is %f\nThe number of iterations is %f\n", testing_result, iters);
+                        printf("The root is %f\nThe number of iterations is %d\n", testing_result, iters);
                     }
 
                     printf("Repeat (y/n)? ");
-                    scanf("%c\n", &repeat);
-                    
+                    scanf("%c", &repeat);
+                    scanf("%c", &repeat);
+        
                     while(repeat != 'n' && repeat != 'y')                                                         //While Reply is not 'n' or 'y', asks to  enter y/n
-                    {
+                    { 
                       printf("Enter only y or n: ");
-                      scanf("%c\n", repeat);//MB without \n
+                      scanf("%c", &repeat);
                     }
 
                   } while(repeat != 'n');
@@ -284,7 +290,7 @@ int main(int argc, char *argv[])
                   do                                                                                              //Repeat while answer to repeat is 'y'
                   {
                     printf("Enter the function number(f): ");
-                    scanf("%d\n", &num1);
+                    scanf("%d", &num1);
                     
                     switch(num1)                                                                                   //Defying the function to test
                     {
@@ -305,36 +311,38 @@ int main(int argc, char *argv[])
                       }
                       default:
                       {
-                        printf("Function number %d does not exist.\n");                                           //If number is invalid, testing mode returns the error
+                        printf("Function number %d does not exist.\n", num1);                                     //If number is invalid, testing mode returns the error
                         testingfunction1 = NULL;
                         break;
                       }
                     }
 
                     printf("Enter the first border of the segment(a): ");                                         //Segment boundaries
-                    scanf("%f\n", &testinga);
+                    scanf("%f", &testinga);
                     
                     printf("Enter the second border of the segment(b): ");
-                    scanf("%f\n", &testingb);
+                    scanf("%f", &testingb);
                                         
                     printf("Enter the epsilon: ");                                                                //Epsilon
-                    scanf("%f\n", &testingeps);
+                    scanf("%f", &testingeps);
 
                     if(testingfunction1 != NULL)
                     {
                       testing_result = integral(testingfunction1, testinga, testingb, testingeps);
 
-                      if(testing_reult != -10)                                                                    //Checking for errors
+                      if(testing_result != -10)                                                                    //Checking for errors
                         printf("The integral is equal to %f\n", testing_result);
                     }
                    
                     printf("Repeat (y/n)? ");
-                    scanf("%c\n", &repeat);
-                    
+                    scanf("%c", &repeat);
+                    scanf("%c", &repeat);
+
                     while(repeat != 'n' && repeat != 'y')                                                         //While Reply is not 'n' or 'y', asks to  enter y/n
                     {
                       printf("Enter only y or n: ");
-                      scanf("%c\n", repeat);
+                      scanf("%c", &repeat);
+
                     }
                   
                   } while(repeat != 'n');
@@ -345,18 +353,18 @@ int main(int argc, char *argv[])
                   do                                                                                              //Repeat while answer to repeat is 'y'
                   { 
                     printf("Enter the function argument: ");
-                    scanf("%f\n", &testing_argument);
+                    scanf("%f", &testing_argument);
                     
                     printf("The function value is equal to %f\n", f1(testing_argument)); 
                     
                     printf("Repeat (y/n)? ");
-                    scanf("%c\n", &repeat);
-                    
-                    while(repeat != 'n' && repeat != 'y')                                                         //While Reply is not 'n' or 'y', asks to  enter y/n
+                    scanf("%c", &repeat);
+                    scanf("%c", &repeat);
 
+                    while(repeat != 'n' && repeat != 'y')                                                         //While Reply is not 'n' or 'y', asks to  enter y/n
                     {
                       printf("Enter only y or n: ");
-                      scanf("%c\n", repeat);
+                      scanf("%c", &repeat);
                     }
                   
                   } while(repeat != 'n');
@@ -367,22 +375,22 @@ int main(int argc, char *argv[])
                   do                                                                                              //Repeat while answer to repeat is 'y'
                   { 
                     printf("Enter the function argument: ");
-                    scanf("%f\n", &testing_argument);
+                    scanf("%f", &testing_argument);
                     
                     if(testing_argument<-0.5)                                                                     //Checking that the argument is                     
                     {                                                                                             //in the scope of the function definition
-                      printf("The point %f does not belong to the scope of \
-                                      the function definition\n", testing_argument);
+                      printf("The point %f does not belong to the scope of the function definition\n", testing_argument);
                     }                                                                                           
                     else printf("The function value is equal to %f\n", f2(testing_argument));
                                        
                     printf("Repeat (y/n)? ");
-                    scanf("%c\n", &repeat);
-                    
+                    scanf("%c", &repeat);
+                    scanf("%c", &repeat);
+
                     while(repeat != 'n' && repeat != 'y')                                                         //While Reply is not 'n' or 'y', asks to  enter y/n
                     {
                       printf("Enter only y or n: ");
-                      scanf("%c\n", repeat);
+                      scanf("%c", &repeat);
                     }
                   
                   } while(repeat != 'n');
@@ -393,21 +401,22 @@ int main(int argc, char *argv[])
                   do                                                                                              //Repeat while answer to repeat is 'y'
                   {
                     printf("Enter the function argument: ");
-                    scanf("%f\n", &testing_argument);
+                    scanf("%f", &testing_argument);
                     
                     printf("The function value is equal to %f\n", f3(testing_argument)); 
                                        
                     printf("Repeat (y/n)? ");
-                    scanf("%c\n", &repeat);
-                    
+                    scanf("%c", &repeat);
+                    scanf("%c", &repeat);
+
                     while(repeat != 'n' && repeat != 'y')                                                         //While Reply is not 'n' or 'y', asks to  enter y/n
                     {
                       printf("Enter only y or n: ");
-                      scanf("%c\n", repeat);
+                      scanf("%c", &repeat);
                     }
                   
                   } while(repeat != 'n');
-                  return 0;                
+                  break;                
                 }
                 default:                                                                                          //If number of the first letter of the testing function
                 {                                                                                                 //is invalid, returns error
@@ -415,22 +424,27 @@ int main(int argc, char *argv[])
                   break;
                 }
               }          
-            printf("Test again (y/n)? ");
-            scanf("%c\n", repeat);
-            
+            printf("Test another function (y/n)? ");
+            scanf("%c", &repeat);
+            scanf("%c", &repeat);
+
             while(repeat != 'n' && repeat != 'y')                                                                 //While Reply is not 'n' or 'y', asks to  enter y/n
             {
               printf("Enter only y or n: ");
-              scanf("%c\n", repeat);
+              scanf("%c", &repeat);
             }
-          
+            flag = 1;
           } while(repeat != 'n');
         }   
-        case 'i': printiters = 1;                                                                                 //Allowing to print the number of iterations
+        case 'i': 
+        {
+          if(flag == 0 && option_index!=-1)
+            printiters = 1;                                                                                       //Allowing to print the number of iterations
+          break;
+        }
         case '?':                                                                                                 //If option is not available, returns error and stops
         {
-          printf("This option is not provided. Please enter --help to get\
-                          information about available options.\n");
+          printf("This option is not provided. Please enter --help to get information about available options.\n");
           return 0;
         }
       
@@ -442,17 +456,16 @@ int main(int argc, char *argv[])
   
   if(ans1 == -10) return 0;                                                                                       //Checking for errors
 
-  if(printx==1) printf("Functions 3/((x-1)^2 + 1) and sqrt(x + 0.5) (f1 and f2)\
-                  are equal at the point %f\n", ans1);                                                            //Options
+  if(printx==1) printf("Functions 3/((x-1)^2 + 1) and sqrt(x + 0.5) (f1 and f2  are equal at the point %f\n", ans1);//Options
   
-  if(printiters == 1) printf("It took %d iterations to find the root", iters);
+  if(printiters == 1) printf("It took %d iterations to find the root of 3/((x-1)^2 + 1) = sqrt(x+0.5)\n", iters);
   
 
   ans2 = root(&f1, &f3, -1.0, 1.0, eps);                                                                          //f1 = f3 at ans2
   
   if(printx == 1)printf("Functions 3/((x-1)^2 + 1) and e^(-x) (f1 and f3) are equal at the point %f\n", ans2);    //Options
   
-  if(printiters == 1)printf("it took %d iterations to find the root", iters);
+  if(printiters == 1)printf("it took %d iterations to find the root 3/((x-1)^2 + 1) = e^-x\n", iters);
   
 
   ans3 = root(&f2, &f3, 0.0, 1.0, eps);                                                                           //f2 = f3 at ans3
@@ -461,7 +474,7 @@ int main(int argc, char *argv[])
   
   if(printx == 1)printf("Functions sqrt(x + 0.5) and e^(-x) (f2 and f3) are equal at the point %f\n", ans3);
   
-  if(printiters == 1) printf("it took %d iterations to find the root", iters);
+  if(printiters == 1) printf("it took %d iterations to find the root sqrt(x+0.5) = e^-x\n", iters);
   
   res = integral(&f1, ans1, ans2, eps);                                                                           //integral of f1 from ans1 to ans2
   res = res - integral(&f2, ans1, ans3, eps);                                                                     //minus integral of f2 from  ans1 to asn3
