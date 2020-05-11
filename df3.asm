@@ -54,7 +54,7 @@ df3:
   fstp                                                      ;pop 1 from stack; stack is empty
   fld qword[esp]                                            ;[esp] in ST0
 
-  jbe .result wrt ..gotoff                                  ;if [esp] <= 1 jump to result
+  jbe .result                                               ;if [esp] <= 1 jump to result
   
   lea eax, [ebx+helper wrt ..gotoff]
   fld qword[eax]                                            ;else [helper] in ST0
@@ -66,12 +66,12 @@ df3:
   fld1                                                      ;[esp]--
   fsubp 
 
-  jmp .L1 wrt ..gotoff
+  jmp .L1
 
 .result:                                                    ;if (log2 e^-x < 0) [helper] = 1/[helper]
   cmp ecx, 1 
   
-  jb .end wrt ..gotoff                                      ;else jump to .end
+  jb .end                                                   ;else jump to .end
   
   fld1                                                      ;1 in ST0
   lea eax, [ebx+helper wrt ..gotoff]

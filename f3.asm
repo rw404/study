@@ -1,10 +1,7 @@
 extern _GLOBAL_OFFSET_TABLE_                                ;for PIC
-extern printf
 section .data
   del dq 2.0                                                ;using in loop to mult [helper]
   helper dq 1.0                                             ;2^[-x]; [-x] - whole part of -x
-section .rodata
-  LC0 db "%f",0
 section .text
 global f3:function
 f3:
@@ -58,7 +55,7 @@ f3:
   fstp                                                      ;pop 1 from stack; stack is empty
   fld qword[esp]                                            ;[esp] in ST0
 
-  jbe .result wrt ..gotoff                                  ;if [esp] <= 1 jump to result
+  jbe .result                                               ;if [esp] <= 1 jump to result
   
   lea eax, [ebx+helper wrt ..gotoff]
   fld qword[eax]                                            ;else [helper] in ST0
@@ -70,12 +67,12 @@ f3:
   fld1                                                      ;[esp]--
   fsubp 
 
-  jmp .L1 wrt ..gotoff
+  jmp .L1
 
 .result:                                                    ;if (log2 e^-x < 0) [helper] = 1/[helper]
   cmp ecx, 1 
   
-  jb .end wrt ..gotoff                                      ;else jump to .end
+  jb .end                                                   ;else jump to .end
   
   fld1                                                      ;1 in ST0
   lea eax, [ebx+helper wrt ..gotoff]
