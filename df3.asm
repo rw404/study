@@ -6,16 +6,15 @@ section .text
 global df3:function
 df3:
   push ebp
-  mov ebp, esp
-  sub esp, 8
-  push ebx
-  
-  push ebx
+  mov ebp, esp 
+  push ebx                                                  ;ebx in [ebp-4]
   call .get_GOT
 
 .get_GOT:
   pop ebx 
   add ebx, _GLOBAL_OFFSET_TABLE_+$$-.get_GOT wrt ..gotpc    ;get GOT in ebx
+
+  sub esp, 8                                                ;space for temporary variables
 
   lea eax,[ebx+helper wrt ..gotoff]
   fld1
@@ -93,7 +92,8 @@ df3:
  
   fchs                                                      ;ST0 = -e^-x 
   
-  pop ebx
+  mov ebx, [ebp-4]                                          ;ebx is restored
+
   leave 
   ret
   

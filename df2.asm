@@ -6,15 +6,15 @@ global df2:function
 df2:
   push ebp
   mov ebp, esp 
-  finit
   push ebx
 
-  push ebx
   call .get_GOT
 
 .get_GOT:
   pop ebx
   add ebx, _GLOBAL_OFFSET_TABLE_+$$-.get_GOT wrt ..gotpc
+
+  finit
 
   fld qword[ebp+8]                                          ;x
   
@@ -26,7 +26,8 @@ df2:
   fdivrp                                                    ;ST1 = ST0/ST1; 1/sqrt(x+0.5) in ST1; pop 1; 1/sqrt(x+0.5) in ST0
   fmul qword[eax]                                           ;1/(2*sqrt(x+0.5)) in ST0
 
-  pop ebx
+  mov ebx, [ebp-4]                                          ;ebx is restored
+
   leave
   ret
 

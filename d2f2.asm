@@ -6,15 +6,15 @@ global d2f2:function
 d2f2:
   push ebp
   mov ebp, esp 
-  finit
   push ebx
 
-  push ebx
   call .get_GOT
 
 .get_GOT:
   pop ebx
   add ebx, _GLOBAL_OFFSET_TABLE_+$$-.get_GOT wrt ..gotpc
+
+  finit
 
   fld qword[ebp+8]                                          ;x
   
@@ -37,7 +37,8 @@ d2f2:
   fmul qword[eax]                                           ;1/(4*sqrt((x+0.5)^3)) in ST0
   fchs                                                      ;-1/(4*sqrt((x+0.5)^3)) in ST0
 
-  pop ebx
+  mov ebx, [ebp-4]                                          ;ebx is restored
+
   leave
   ret
 

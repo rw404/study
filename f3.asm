@@ -6,18 +6,15 @@ section .text
 global f3:function
 f3:
   push ebp
-  mov ebp, esp
-  sub esp, 16
-  and esp, 0xfffffff0
-  push ebx
-  
-  push ebx
+  mov ebp, esp 
+  push ebx                                                  ;ebx in [ebp-4]
   call .get_GOT
 
 .get_GOT:
   pop ebx 
   add ebx, _GLOBAL_OFFSET_TABLE_+$$-.get_GOT wrt ..gotpc    ;get GOT in ebx
-
+  sub esp, 8
+  
   lea eax, [ebx+helper wrt ..gotoff]
   fld1
   fstp qword[eax]                                           ;[helper] = 1
@@ -67,7 +64,7 @@ f3:
   fld1                                                      ;[esp]--
   fsubp 
 
-  jmp .L1
+  jmp .L1 
 
 .result:                                                    ;if (log2 e^-x < 0) [helper] = 1/[helper]
   cmp ecx, 1 
@@ -91,7 +88,8 @@ f3:
   lea eax, [ebx+helper wrt ..gotoff]
   fmul qword[eax]                                           ;ST0 = [helper] * ST0 = e^-x
   
-  pop ebx 
+  mov ebx,[ebp-4]                                           ;ebx saved in [ebp-4]; now it is restored 
+ 
   leave 
   ret
   

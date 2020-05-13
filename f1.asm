@@ -6,7 +6,6 @@ f1:
 	mov	ebp, esp
   push ebx
 
-  push ebx
   call .get_GOT
 
 .get_GOT:
@@ -34,6 +33,7 @@ f1:
                                                             ;3 in ST0; (x-1)^2 + 1 in ST1 
 	fdivrp                                                    ;ST1 = ST0/ST1; pop ST0; 3/((x-1)^2 + 1) 
 	
-  pop ebx
+  mov ebx, [ebp-4]                                          ;ebx is restored
+
   leave
   ret

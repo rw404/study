@@ -6,7 +6,6 @@ df1:
 	mov	ebp, esp
   push ebx
 
-  push ebx
   call .get_GOT
 
 .get_GOT:
@@ -59,6 +58,7 @@ df1:
   faddp                                                     ;2 in ST1; -3(x-1)/((x-1)^2 +1)^2 in ST2; pop 1; 2 in ST0; -3(x-1)/((x-1)^2 +1)^2 in ST1
   fmulp                                                     ;-6/((x-1)^2 + 1)^2 in ST1; pop 2; -6(x-1)/((x-1)^2 +1)^2 in ST0
 
-  pop ebx
+  mov ebx, [ebp-4]                                          ;ebx is restored
+
   leave
   ret

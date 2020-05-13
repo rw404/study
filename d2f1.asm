@@ -7,7 +7,6 @@ d2f1:
   push ebx
   sub esp, 8
 
-  push ebx
   call .get_GOT
 
 .get_GOT:
@@ -96,8 +95,7 @@ d2f1:
 
   fsub qword[esp]                                           ;24(x-1)^2/((x-1)^2 + 1)^3 - 6/((x-1)^2 + 1)^2 in ST0
 
-  
-  add esp, 8
-  pop ebx
+  mov ebx, [ebp-4]                                          ;ebx is restored
+
   leave
   ret
