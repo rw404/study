@@ -277,7 +277,8 @@ int main(int argc, char *argv[])
                     scanf("%c", &repeat);
         
                     while(repeat != 'n' && repeat != 'y')                                                         //While Reply is not 'n' or 'y', asks to  enter y/n
-                    { 
+                    {
+                      while(repeat!='\n') scanf("%c", &repeat); 
                       printf("Enter only y or n: ");
                       scanf("%c", &repeat);
                     }
@@ -340,6 +341,7 @@ int main(int argc, char *argv[])
 
                     while(repeat != 'n' && repeat != 'y')                                                         //While Reply is not 'n' or 'y', asks to  enter y/n
                     {
+                      while(repeat!='\n') scanf("%c", &repeat); 
                       printf("Enter only y or n: ");
                       scanf("%c", &repeat);
 
@@ -363,6 +365,7 @@ int main(int argc, char *argv[])
 
                     while(repeat != 'n' && repeat != 'y')                                                         //While Reply is not 'n' or 'y', asks to  enter y/n
                     {
+                      while(repeat!='\n') scanf("%c", &repeat);
                       printf("Enter only y or n: ");
                       scanf("%c", &repeat);
                     }
@@ -389,6 +392,7 @@ int main(int argc, char *argv[])
 
                     while(repeat != 'n' && repeat != 'y')                                                         //While Reply is not 'n' or 'y', asks to  enter y/n
                     {
+                      while(repeat!='\n') scanf("%c", &repeat);
                       printf("Enter only y or n: ");
                       scanf("%c", &repeat);
                     }
@@ -411,6 +415,7 @@ int main(int argc, char *argv[])
 
                     while(repeat != 'n' && repeat != 'y')                                                         //While Reply is not 'n' or 'y', asks to  enter y/n
                     {
+                      while(repeat!='\n') scanf("%c", &repeat);
                       printf("Enter only y or n: ");
                       scanf("%c", &repeat);
                     }
@@ -430,6 +435,7 @@ int main(int argc, char *argv[])
 
             while(repeat != 'n' && repeat != 'y')                                                                 //While Reply is not 'n' or 'y', asks to  enter y/n
             {
+              while(repeat!='\n') scanf("%c", &repeat);
               printf("Enter only y or n: ");
               scanf("%c", &repeat);
             }
