@@ -1,120 +1,148 @@
+//FLAGS: -std=c++17 -Wall -Wextra -fsanitize=address -fsanitize=undefined
 #include <iostream>
-#include <stack>
-#include <string>
+#include <string_view>
+#include <deque>
 
-class Snake
-{
-  private:
-          std::string color;
-          std::string username;
+#ifndef NDEBUG
+    #define LOG( smth ) smth
+#else
+    #define LOG( smth ) if (0) smth
+#endif
 
-  public:
-          std::stack <char> body;
-          int length;
+class Snake {
+public:
+    struct Fragment {
+        int x;
+        int y;
+        Fragment(const int& x, const int& y)
+                : x(x), y(y) {}
+    };
+    typedef Fragment fragment_t;
 
-          //constructor
-          Snake(const std::string* user, const std::string color_user)
-          : username(new char[std::strlen(user)+1]), color(new char[std::strlen(color_user)])
-          {
-              length = 1;
-              body.push(1);
-              std::strcpy(username, user);
-              std::strcpy(color, color_user);
-          }
-          
-          //distructor
-          ~Snake()
-          {
-              while(!body.empty())
-              {
-                body.pop();
-                --length;
-              }
-              delete[] username;
-              delete[] color;
-          }
+    Snake(const std::string_view& name, const std::string_view& color)
+            : name(name), color(color) {
+        body.emplace_back(0, 0);
+        LOG(std::cout << "$ Created snake " << name << '\n');
+    }
 
-          //copy_constructor
-          Snake(const Snake& other)//friend for private
-          {
-            username = new char[std::strlen(other.username) + 1];
-            color    = new char[std::strlen(other.color) + 1];
-            std::strcpy(username, other.username);
-            std::strcpy(color, other.color);
-            length   = other.length;
-            
-            auto std::stack <char> tmp;
-            while(!(other.body).empty()) 
-            {
-              tmp.push((other.body).pop());
-            }   
-            while(!tmp.empty())
-            {
-              body.push(tmp.pop());
-              (other.body).push(body.top());
-            }            
-          }
+    ~Snake() {
+        LOG(std::cout << "$ Snake " << name << " destructed\n");
+    }
 
-          //move_constructor
-          Snake(Snake&& mover):length(mover.length),color(mover.color),username(mover.username)
-          {
-            mover.username = nullptr;
-            mover.color    = nullptr;
-            mover.length   = 0;
-            while(!(other.body).empty()) body.push((other.body).pop());
-          }
+    Snake(const Snake& other)
+        : name(other.name)
+        , color(other.color)
+        , body(other.body) {
+        LOG(std::cout << "$ Copied snake\n");
+    }
 
-          //copy_assigment
-          Snake& operator=(const Snake& other)
-          {
-            if(this  == &other)
-              return *this;
+    Snake(Snake&& other)
+            : name(other.name)
+            , color(other.color) {
+        body = std::move(other.body);
+        LOG(std::cout << "$ Moved snake\n");
+    }
 
-            delete[] username;
-            delete[] color;
-            username = new char[std::strlen(other.username) + 1];
-            std::strcpy(username, other.username);
-            color    = new char[std::strlen(other.color) + 1];
-            std::strcpy(color, other.color);
-            length   = other.length;
-
-            while(!body.empty()) body.pop();
-
-            auto std::stack <char> tmp;
-            while(!(other.body).empty()) 
-            {
-              tmp.push((other.body).pop());
-            }   
-            while(!tmp.empty())
-            {
-              body.push(tmp.pop());
-              (other.body).push(body.top());
-            }
-
+    Snake& operator=(const Snake& other) {
+        if (&other == this) {
             return *this;
-          }
+        }
 
-          //move_assigment
-          Snake& operator=(Snake&& other) noexcept
-          {
-            if(this == other) return *this;
+        name = other.name;
+        color = other.color;
+        body = other.body;
 
-            delete[] username;
-            delete[] color;
-            
-            username      = other.username;
-            that.username = nullptr;
-            color         = other.color;
-            other.color   = nullptr;
-            length        = other.length;
-            other.length  = 0;
+        LOG(std::cout << "$ Copy-assigned snake\n");
+        return *this;
+    }
 
-            while(!body.empty()) body.pop();
-
-            while(!(other.body).empty()) body.push((other.body).pop());
-            
+    Snake& operator=(Snake&& other) {
+        if (&other == this) {
             return *this;
-          }
+        }
+
+        name = other.name;
+        color = other.color;
+        body = std::move(other.body);
+
+        LOG(std::cout << "$ Move-assigned snake\n");
+        return *this;
+    }
+
+    void acquireFragment(const Fragment& fragment) {
+        body.emplace_back(fragment);
+        LOG(std::cout << "$ Length of " << name << " increased by 1 and now is " << body.size() << '\n');
+    }
+
+    void loseTail() {
+        if (!body.empty()) {
+            body.pop_back();
+            LOG(std::cout << "$ Length of " << name << " decreased by 1 and now is " << body.size() << '\n');
+        } else {
+            LOG(std::cout << "$ Length of " << name << " is 0 and didn't changed\n");
+        }
+    }
+
+    [[nodiscard]] std::string_view getName() const {
+        return name;
+    }
+
+    [[nodiscard]] std::string_view getColor() const {
+        return color;
+    }
+
+    [[nodiscard]] size_t getLength() const {
+        return body.size();
+    }
+
+    friend std::ostream& operator<<(std::ostream& stream, const Snake& snake);
+
+private:
+    std::string_view name;
+    std::string_view color;
+    std::deque<fragment_t> body;
 };
 
+std::ostream& operator<<(std::ostream& stream, const Snake& snake) {
+    stream << "Snake " << snake.name << " (color: " << snake.color << ")\n";
+    for (const auto& fragment : snake.body) {
+        stream << "{" << fragment.x << ", " << fragment.y << "}__";
+    }
+    if (!snake.body.size()) {
+        stream << "no fragments";
+    }
+    return stream;
+}
 
+int main() {
+    //-------------------------------------
+    std::cout << "  Testing constructor\n";
+
+    Snake snakeGosha("Gosha", "#123123");
+    std::cout << snakeGosha << '\n';
+    //-------------------------------------
+    std::cout << "  Testing copy-constructor\n";
+
+    Snake snakeClone = snakeGosha;
+    std::cout << snakeClone << '\n';
+    //-------------------------------------
+    std::cout << "  Testing move-constructor\n";
+
+    Snake snakeNewClone = std::move(snakeClone);
+    std::cout << snakeNewClone << '\n';
+    //-------------------------------------
+    std::cout << "  Testing length acquisition\n";
+
+    snakeGosha.acquireFragment(Snake::Fragment(1, 2));
+    std::cout << snakeGosha << '\n';
+
+    std::cout << "Check clone state: \n" << snakeNewClone << '\n';
+    //-------------------------------------
+    std::cout << "  Test loss of length\n";
+
+    snakeNewClone.loseTail();
+    std::cout << snakeNewClone << '\n';
+    //-------------------------------------
+
+    return 0;
+}
