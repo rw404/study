@@ -30,15 +30,31 @@
     │   └── Snake.cpp
     └── grokking_deep_learning
         ├── AItexts
-        │   ├── Framework\ (2).ipynb
+        │   ├── Final.ipynb
+        │   ├── Framework (2).ipynb
         │   ├── Framework.ipynb
         │   ├── Ready_to_train.py
-        │   └── pushkin.txt
+        │   ├── embed.npy
+        │   ├── hc.npy
+        │   ├── hf.npy
+        │   ├── hi.npy
+        │   ├── ho.npy
+        │   ├── indices.npy
+        │   ├── pushkin.txt
+        │   ├── vocab.txt
+        │   ├── w_ho.npy
+        │   ├── xc.npy
+        │   ├── xc_bias.npy
+        │   ├── xf.npy
+        │   ├── xf_bias.npy
+        │   ├── xi.npy
+        │   ├── xi_bias.npy
+        │   ├── xo.npy
+        │   └── xo_bias.npy
         ├── CNN.py
         ├── ML.py
         ├── MNIST+dropout.py
         ├── README.md
         ├── ml_grad.py
         └── softmax+tanh.py
-
 ```
