@@ -23,16 +23,18 @@ new_sum = 0
 new_votes = {}
 
 for i in voting.keys():
-    new_sum += voting[i] // firstval
-    new_votes[i] = voting[i] / firstval
+    if len(voting.keys()) == 1:
+        new_sum = 450
+        new_votes[i] = 450
+    else:
+        new_sum += voting[i] // firstval
+        new_votes[i] = voting[i] / firstval
 
 cnt = 450-new_sum
 
 if cnt > 0:
     collision = [(new_votes[i]%1, voting[i], i) for i in voting.keys()]
     ans = sorted(collision, reverse=True)
-    
-    print(ans)
 
     while cnt > 0:
         for i in ans:
