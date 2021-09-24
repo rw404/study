@@ -26,6 +26,7 @@
 │       │   ├── Bazy_Dannykh.pdf
 │       │   ├── Ekonomika.pdf
 │       │   ├── Metody_Mashinnogo_Obuchenia.pdf
+│       │   ├── Metody_Obrabotki_I_Raspoznavania_Izobrazhenii.pdf
 │       │   ├── Prikladnaya_Algebra.pdf
 │       │   ├── Superkompyutery_I_Parallelnaya_Obrabotka_Dannykh.pdf
 │       │   ├── Uravnenia_Matematicheskoi_Fiziki.pdf
