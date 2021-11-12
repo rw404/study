@@ -1,0 +1,8092 @@
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 815578: <#BSUB -n 1;#BSUB -W 00:15;#BSUB -o "my_job.%J.out";#BSUB -e "my_job.%J.err";#BSUB -R "span[hosts=1]";OMP_NUM_THREADS=2 ./parallel 100;OMP_NUM_THREADS=2 ./parallel 200;OMP_NUM_THREADS=2 ./parallel 300;OMP_NUM_THREADS=2 ./parallel 400;OMP_NUM_THREADS=2 ./parallel 500;OMP_NUM_THREADS=2 ./parallel 600;OMP_NUM_THREADS=2 ./parallel 700;OMP_NUM_THREADS=2 ./parallel 800;OMP_NUM_THREADS=2 ./parallel 900;OMP_NUM_THREADS=2 ./parallel 1000;OMP_NUM_THREADS=2 ./parallel 1100;OMP_NUM_THREADS=2 ./parallel 1200;OMP_NUM_THREADS=2 ./parallel 1300;OMP_NUM_THREADS=2 ./parallel 1400;OMP_NUM_THREADS=2 ./parallel 1500;OMP_NUM_THREADS=2 ./parallel 1600;OMP_NUM_THREADS=2 ./parallel 1700;OMP_NUM_THREADS=2 ./parallel 1800;OMP_NUM_THREADS=2 ./parallel 1900;OMP_NUM_THREADS=2 ./parallel 2000;OMP_NUM_THREADS=4 ./parallel 100;OMP_NUM_THREADS=4 ./parallel 200;OMP_NUM_THREADS=4 ./parallel 300;OMP_NUM_THREADS=4 ./parallel 400;OMP_NUM_THREADS=4 ./parallel 500;OMP_NUM_THREADS=4 ./parallel 600;OMP_NUM_THREADS=4 ./parallel 700;OMP_NUM_THREADS=4 ./parallel 800;OMP_NUM_THREADS=4 ./parallel 900;OMP_NUM_THREADS=4 ./parallel 1000;OMP_NUM_THREADS=4 ./parallel 1100;OMP_NUM_THREADS=4 ./parallel 1200;OMP_NUM_THREADS=4 ./parallel 1300;OMP_NUM_THREADS=4 ./parallel 1400;OMP_NUM_THREADS=4 ./parallel 1500;OMP_NUM_THREADS=4 ./parallel 1600;OMP_NUM_THREADS=4 ./parallel 1700;OMP_NUM_THREADS=4 ./parallel 1800;OMP_NUM_THREADS=4 ./parallel 1900;OMP_NUM_THREADS=4 ./parallel 2000;OMP_NUM_THREADS=6 ./parallel 100;OMP_NUM_THREADS=6 ./parallel 200;OMP_NUM_THREADS=6 ./parallel 300;OMP_NUM_THREADS=6 ./parallel 400;OMP_NUM_THREADS=6 ./parallel 500;OMP_NUM_THREADS=6 ./parallel 600;OMP_NUM_THREADS=6 ./parallel 700;OMP_NUM_THREADS=6 ./parallel 800;OMP_NUM_THREADS=6 ./parallel 900;OMP_NUM_THREADS=6 ./parallel 1000;OMP_NUM_THREADS=6 ./parallel 1100;OMP_NUM_THREADS=6 ./parallel 1200;OMP_NUM_THREADS=6 ./parallel 1300;OMP_NUM_THREADS=6 ./parallel 1400;OMP_NUM_THREADS=6 ./parallel 1500;OMP_NUM_THREADS=6 ./parallel 1600;OMP_NUM_THREADS=6 ./parallel 1700;OMP_NUM_THREADS=6 ./parallel 1800;OMP_NUM_THREADS=6 ./parallel 1900;OMP_NUM_THREADS=6 ./parallel 2000;OMP_NUM_THREADS=8 ./parallel 100;OMP_NUM_THREADS=8 ./parallel 200;OMP_NUM_THREADS=8 ./parallel 300;OMP_NUM_THREADS=8 ./parallel 400;OMP_NUM_THREADS=8 ./parallel 500;OMP_NUM_THREADS=8 ./parallel 600;OMP_NUM_THREADS=8 ./parallel 700;OMP_NUM_THREADS=8 ./parallel 800;OMP_NUM_THREADS=8 ./parallel 900;OMP_NUM_THREADS=8 ./parallel 1000;OMP_NUM_THREADS=8 ./parallel 1100;OMP_NUM_THREADS=8 ./parallel 1200;OMP_NUM_THREADS=8 ./parallel 1300;OMP_NUM_THREADS=8 ./parallel 1400;OMP_NUM_THREADS=8 ./parallel 1500;OMP_NUM_THREADS=8 ./parallel 1600;OMP_NUM_THREADS=8 ./parallel 1700;OMP_NUM_THREADS=8 ./parallel 1800;OMP_NUM_THREADS=8 ./parallel 1900;OMP_NUM_THREADS=8 ./parallel 2000;OMP_NUM_THREADS=10 ./parallel 100;OMP_NUM_THREADS=10 ./parallel 200;OMP_NUM_THREADS=10 ./parallel 300;OMP_NUM_THREADS=10 ./parallel 400;OMP_NUM_THREADS=10 ./parallel 500;OMP_NUM_THREADS=10 ./parallel 600;OMP_NUM_THREADS=10 ./parallel 700;OMP_NUM_THREADS=10 ./parallel 800;OMP_NUM_THREADS=10 ./parallel 900;OMP_NUM_THREADS=10 ./parallel 1000;OMP_NUM_THREADS=10 ./parallel 1100;OMP_NUM_THREADS=10 ./parallel 1200;OMP_NUM_THREADS=10 ./parallel 1300;OMP_NUM_THREADS=10 ./parallel 1400;OMP_NUM_THREADS=10 ./parallel 1500;OMP_NUM_THREADS=10 ./parallel 1600;OMP_NUM_THREADS=10 ./parallel 1700;OMP_NUM_THREADS=10 ./parallel 1800;OMP_NUM_THREADS=10 ./parallel 1900;OMP_NUM_THREADS=10 ./parallel 2000;OMP_NUM_THREADS=12 ./parallel 100;OMP_NUM_THREADS=12 ./parallel 200;OMP_NUM_THREADS=12 ./parallel 300;OMP_NUM_THREADS=12 ./parallel 400;OMP_NUM_THREADS=12 ./parallel 500;OMP_NUM_THREADS=12 ./parallel 600;OMP_NUM_THREADS=12 ./parallel 700;OMP_NUM_THREADS=12 ./parallel 800;OMP_NUM_THREADS=12 ./parallel 900;OMP_NUM_THREADS=12 ./parallel 1000;OMP_NUM_THREADS=12 ./parallel 1100;OMP_NUM_THREADS=12 ./parallel 1200;OMP_NUM_THREADS=12 ./parallel 1300;OMP_NUM_THREADS=12 ./parallel 1400;OMP_NUM_THREADS=12 ./parallel 1500;OMP_NUM_THREADS=12 ./parallel 1600;OMP_NUM_THREADS=12 ./parallel 1700;OMP_NUM_TH> in cluster <MSUCluster> Done
+
+Job <#BSUB -n 1;#BSUB -W 00:15;#BSUB -o "my_job.%J.out";#BSUB -e "my_job.%J.err";#BSUB -R "span[hosts=1]";OMP_NUM_THREADS=2 ./parallel 100;OMP_NUM_THREADS=2 ./parallel 200;OMP_NUM_THREADS=2 ./parallel 300;OMP_NUM_THREADS=2 ./parallel 400;OMP_NUM_THREADS=2 ./parallel 500;OMP_NUM_THREADS=2 ./parallel 600;OMP_NUM_THREADS=2 ./parallel 700;OMP_NUM_THREADS=2 ./parallel 800;OMP_NUM_THREADS=2 ./parallel 900;OMP_NUM_THREADS=2 ./parallel 1000;OMP_NUM_THREADS=2 ./parallel 1100;OMP_NUM_THREADS=2 ./parallel 1200;OMP_NUM_THREADS=2 ./parallel 1300;OMP_NUM_THREADS=2 ./parallel 1400;OMP_NUM_THREADS=2 ./parallel 1500;OMP_NUM_THREADS=2 ./parallel 1600;OMP_NUM_THREADS=2 ./parallel 1700;OMP_NUM_THREADS=2 ./parallel 1800;OMP_NUM_THREADS=2 ./parallel 1900;OMP_NUM_THREADS=2 ./parallel 2000;OMP_NUM_THREADS=4 ./parallel 100;OMP_NUM_THREADS=4 ./parallel 200;OMP_NUM_THREADS=4 ./parallel 300;OMP_NUM_THREADS=4 ./parallel 400;OMP_NUM_THREADS=4 ./parallel 500;OMP_NUM_THREADS=4 ./parallel 600;OMP_NUM_THREADS=4 ./parallel 700;OMP_NUM_THREADS=4 ./parallel 800;OMP_NUM_THREADS=4 ./parallel 900;OMP_NUM_THREADS=4 ./parallel 1000;OMP_NUM_THREADS=4 ./parallel 1100;OMP_NUM_THREADS=4 ./parallel 1200;OMP_NUM_THREADS=4 ./parallel 1300;OMP_NUM_THREADS=4 ./parallel 1400;OMP_NUM_THREADS=4 ./parallel 1500;OMP_NUM_THREADS=4 ./parallel 1600;OMP_NUM_THREADS=4 ./parallel 1700;OMP_NUM_THREADS=4 ./parallel 1800;OMP_NUM_THREADS=4 ./parallel 1900;OMP_NUM_THREADS=4 ./parallel 2000;OMP_NUM_THREADS=6 ./parallel 100;OMP_NUM_THREADS=6 ./parallel 200;OMP_NUM_THREADS=6 ./parallel 300;OMP_NUM_THREADS=6 ./parallel 400;OMP_NUM_THREADS=6 ./parallel 500;OMP_NUM_THREADS=6 ./parallel 600;OMP_NUM_THREADS=6 ./parallel 700;OMP_NUM_THREADS=6 ./parallel 800;OMP_NUM_THREADS=6 ./parallel 900;OMP_NUM_THREADS=6 ./parallel 1000;OMP_NUM_THREADS=6 ./parallel 1100;OMP_NUM_THREADS=6 ./parallel 1200;OMP_NUM_THREADS=6 ./parallel 1300;OMP_NUM_THREADS=6 ./parallel 1400;OMP_NUM_THREADS=6 ./parallel 1500;OMP_NUM_THREADS=6 ./parallel 1600;OMP_NUM_THREADS=6 ./parallel 1700;OMP_NUM_THREADS=6 ./parallel 1800;OMP_NUM_THREADS=6 ./parallel 1900;OMP_NUM_THREADS=6 ./parallel 2000;OMP_NUM_THREADS=8 ./parallel 100;OMP_NUM_THREADS=8 ./parallel 200;OMP_NUM_THREADS=8 ./parallel 300;OMP_NUM_THREADS=8 ./parallel 400;OMP_NUM_THREADS=8 ./parallel 500;OMP_NUM_THREADS=8 ./parallel 600;OMP_NUM_THREADS=8 ./parallel 700;OMP_NUM_THREADS=8 ./parallel 800;OMP_NUM_THREADS=8 ./parallel 900;OMP_NUM_THREADS=8 ./parallel 1000;OMP_NUM_THREADS=8 ./parallel 1100;OMP_NUM_THREADS=8 ./parallel 1200;OMP_NUM_THREADS=8 ./parallel 1300;OMP_NUM_THREADS=8 ./parallel 1400;OMP_NUM_THREADS=8 ./parallel 1500;OMP_NUM_THREADS=8 ./parallel 1600;OMP_NUM_THREADS=8 ./parallel 1700;OMP_NUM_THREADS=8 ./parallel 1800;OMP_NUM_THREADS=8 ./parallel 1900;OMP_NUM_THREADS=8 ./parallel 2000;OMP_NUM_THREADS=10 ./parallel 100;OMP_NUM_THREADS=10 ./parallel 200;OMP_NUM_THREADS=10 ./parallel 300;OMP_NUM_THREADS=10 ./parallel 400;OMP_NUM_THREADS=10 ./parallel 500;OMP_NUM_THREADS=10 ./parallel 600;OMP_NUM_THREADS=10 ./parallel 700;OMP_NUM_THREADS=10 ./parallel 800;OMP_NUM_THREADS=10 ./parallel 900;OMP_NUM_THREADS=10 ./parallel 1000;OMP_NUM_THREADS=10 ./parallel 1100;OMP_NUM_THREADS=10 ./parallel 1200;OMP_NUM_THREADS=10 ./parallel 1300;OMP_NUM_THREADS=10 ./parallel 1400;OMP_NUM_THREADS=10 ./parallel 1500;OMP_NUM_THREADS=10 ./parallel 1600;OMP_NUM_THREADS=10 ./parallel 1700;OMP_NUM_THREADS=10 ./parallel 1800;OMP_NUM_THREADS=10 ./parallel 1900;OMP_NUM_THREADS=10 ./parallel 2000;OMP_NUM_THREADS=12 ./parallel 100;OMP_NUM_THREADS=12 ./parallel 200;OMP_NUM_THREADS=12 ./parallel 300;OMP_NUM_THREADS=12 ./parallel 400;OMP_NUM_THREADS=12 ./parallel 500;OMP_NUM_THREADS=12 ./parallel 600;OMP_NUM_THREADS=12 ./parallel 700;OMP_NUM_THREADS=12 ./parallel 800;OMP_NUM_THREADS=12 ./parallel 900;OMP_NUM_THREADS=12 ./parallel 1000;OMP_NUM_THREADS=12 ./parallel 1100;OMP_NUM_THREADS=12 ./parallel 1200;OMP_NUM_THREADS=12 ./parallel 1300;OMP_NUM_THREADS=12 ./parallel 1400;OMP_NUM_THREADS=12 ./parallel 1500;OMP_NUM_THREADS=12 ./parallel 1600;OMP_NUM_THREADS=12 ./parallel 1700;OMP_NUM_TH> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skpod21-320-20> in cluster <MSUCluster> at Fri Nov 12 19:42:01 2021
+Job was executed on host(s) <polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <short>, as user <edu-cmc-skpod21-320-20> in cluster <MSUCluster> at Fri Nov 12 19:42:01 2021
+</home_edu/edu-cmc-skpod21-320/edu-cmc-skpod21-320-20> was used as the home directory.
+</home_edu/edu-cmc-skpod21-320/edu-cmc-skpod21-320-20> was used as the working directory.
+Started at Fri Nov 12 19:42:01 2021
+Terminated at Fri Nov 12 19:52:21 2021
+Results reported at Fri Nov 12 19:52:21 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -n 1
+#BSUB -W 00:15
+#BSUB -o "my_job.%J.out"
+#BSUB -e "my_job.%J.err"
+#BSUB -R "span[hosts=1]"
+OMP_NUM_THREADS=2 ./parallel 100
+OMP_NUM_THREADS=2 ./parallel 200
+OMP_NUM_THREADS=2 ./parallel 300
+OMP_NUM_THREADS=2 ./parallel 400
+OMP_NUM_THREADS=2 ./parallel 500
+OMP_NUM_THREADS=2 ./parallel 600
+OMP_NUM_THREADS=2 ./parallel 700
+OMP_NUM_THREADS=2 ./parallel 800
+OMP_NUM_THREADS=2 ./parallel 900
+OMP_NUM_THREADS=2 ./parallel 1000
+OMP_NUM_THREADS=2 ./parallel 1100
+OMP_NUM_THREADS=2 ./parallel 1200
+OMP_NUM_THREADS=2 ./parallel 1300
+OMP_NUM_THREADS=2 ./parallel 1400
+OMP_NUM_THREADS=2 ./parallel 1500
+OMP_NUM_THREADS=2 ./parallel 1600
+OMP_NUM_THREADS=2 ./parallel 1700
+OMP_NUM_THREADS=2 ./parallel 1800
+OMP_NUM_THREADS=2 ./parallel 1900
+OMP_NUM_THREADS=2 ./parallel 2000
+OMP_NUM_THREADS=4 ./parallel 100
+OMP_NUM_THREADS=4 ./parallel 200
+OMP_NUM_THREADS=4 ./parallel 300
+OMP_NUM_THREADS=4 ./parallel 400
+OMP_NUM_THREADS=4 ./parallel 500
+OMP_NUM_THREADS=4 ./parallel 600
+OMP_NUM_THREADS=4 ./parallel 700
+OMP_NUM_THREADS=4 ./parallel 800
+OMP_NUM_THREADS=4 ./parallel 900
+OMP_NUM_THREADS=4 ./parallel 1000
+OMP_NUM_THREADS=4 ./parallel 1100
+OMP_NUM_THREADS=4 ./parallel 1200
+OMP_NUM_THREADS=4 ./parallel 1300
+OMP_NUM_THREADS=4 ./parallel 1400
+OMP_NUM_THREADS=4 ./parallel 1500
+OMP_NUM_THREADS=4 ./parallel 1600
+OMP_NUM_THREADS=4 ./parallel 1700
+OMP_NUM_THREADS=4 ./parallel 1800
+OMP_NUM_THREADS=4 ./parallel 1900
+OMP_NUM_THREADS=4 ./parallel 2000
+OMP_NUM_THREADS=6 ./parallel 100
+OMP_NUM_THREADS=6 ./parallel 200
+OMP_NUM_THREADS=6 ./parallel 300
+OMP_NUM_THREADS=6 ./parallel 400
+OMP_NUM_THREADS=6 ./parallel 500
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   53261.25 sec.
+    Max Memory :                                 41 MB
+    Average Memory :                             34.21 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                164
+    Run time :                                   619 sec.
+    Turnaround time :                            620 sec.
+
+The output (if any) follows:
+
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119484s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0448464s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0691243s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0587228s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0777102s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.103092s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.110846s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.19507s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.168603s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.298006s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.324376s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.377043s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.408133s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.474406s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.690264s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.712926s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.73012s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.769882s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.943732s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.982598s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118267s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0426055s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0680154s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0767517s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.096573s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0962877s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.13864s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.144685s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.214579s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.256972s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.320969s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.326853s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.398535s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.644842s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.57368s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.625267s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.819556s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.820086s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.915958s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.01248s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119408s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0866358s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0665613s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0646979s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.10468s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.127101s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.151483s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.169612s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.1939s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.206039s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.2792s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.350591s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.456551s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.592075s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.744304s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.695723s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.699357s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.850084s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.972478s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.17085s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118686s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.04463s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.102226s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0710973s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.08892s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.100226s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.149958s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.134287s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.180959s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.223004s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.266417s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.335215s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.386618s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.461362s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.645144s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.596673s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.813535s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.830472s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.879593s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.01169s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.0012115s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0450793s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.106953s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0785005s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.076184s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0878531s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.133944s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.180411s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.205599s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.217616s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.32081s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.391776s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.389095s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.508943s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.610158s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.647968s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.700913s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.801072s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.889672s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.01015s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119358s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0551075s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0849756s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0922058s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0768872s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.109787s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.138147s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.141424s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.218464s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.266093s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.255463s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.323504s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.394318s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.487487s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.581021s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.608394s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.694841s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.84487s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=1.00966s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.03773s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119049s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0646439s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0708632s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0610787s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0916285s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.104198s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.11572s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.141246s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.230631s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.260649s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.305785s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.384235s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.375109s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.451091s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.660879s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.625801s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.701213s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.794386s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.905009s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.976967s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00120627s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0538153s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0701041s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0796035s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0825359s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0983943s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.138135s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.158661s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.177748s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.230192s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.382342s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.324425s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.44999s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.444736s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.499372s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.690113s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.760696s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.828468s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.952496s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.04564s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119428s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0598953s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0748686s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0637195s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0734645s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0910544s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.126408s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.153413s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.167472s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.294488s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.318517s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.396759s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.629186s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.616619s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.655955s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.698076s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.682901s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.74336s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.966824s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.02431s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118739s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0650021s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0578242s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0799128s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0925319s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.105181s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.118265s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.211085s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.167943s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.233925s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.325481s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.340486s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.402185s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.619179s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.644634s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.695774s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.747987s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.895019s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.889158s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.990003s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118502s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0453934s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0567886s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0905313s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0756088s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0973838s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.107824s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.167342s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.202534s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.211067s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.296606s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.39163s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.429545s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.470571s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.580714s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.55453s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.735126s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.813005s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.870843s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.05647s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119375s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0768876s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0530143s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0640422s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0864466s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.114865s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.108695s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.136716s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.175141s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.235348s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.328837s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.442998s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.480747s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.473734s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.555571s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.600375s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.651426s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.773426s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.899712s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.08182s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00124849s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0785046s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0569205s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0631183s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0825261s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0957133s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.125443s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.136823s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.17198s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.228733s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.319517s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.341766s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.481546s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.594615s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.491475s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.653213s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.658896s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.792335s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.925575s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.04164s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.0011929s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0446026s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0842123s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0623321s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0735585s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0955708s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.122117s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.17852s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.165872s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.219307s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.331338s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.341681s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.378724s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.483631s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.608737s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.580592s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.84005s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.769957s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.854628s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.00892s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119317s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0680704s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0560179s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0699185s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0891417s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.158574s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.116238s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.137164s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.169908s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.215568s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.434071s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.312167s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.491934s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.583424s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.524649s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.675734s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.69726s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.752526s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.885833s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.02918s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119366s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0498391s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0825966s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0592009s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0849369s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.106436s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.118426s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.185709s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.168414s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.263147s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.313649s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.375953s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.421536s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.590625s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.581197s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.711991s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.778899s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.838432s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.86983s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.05832s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118779s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0669057s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0644039s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0613415s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0779426s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0874808s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.133892s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.156401s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.199227s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.205397s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.440876s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.570558s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.440944s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.473546s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.611646s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.56058s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.747714s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.762102s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.885961s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.03285s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118676s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0482634s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0881115s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0640852s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.103973s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0894416s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.113201s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.184815s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.17567s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.243438s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.340311s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.357399s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.443139s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.464439s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.571151s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.725761s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.697487s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.831539s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.903659s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.02258s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119357s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0485111s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0517412s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0702607s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.102623s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.108794s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.121431s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.238967s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.298014s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.266977s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.27348s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.330958s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.37773s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.636545s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.563082s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.611349s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.689528s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.89245s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.896944s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.979614s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118672s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0659651s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0821246s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0651858s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.092634s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.118433s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.134267s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.16576s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.206464s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.22165s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.336622s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.337121s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.48437s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.497561s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.775743s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.998924s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.715587s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.74247s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.912255s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.992309s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00120734s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0475042s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0701338s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0630184s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0852625s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0920786s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.141751s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.160028s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.20046s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.260557s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.325919s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.546685s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.407339s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.594785s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.5958s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.717697s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.734407s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.946815s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.867035s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.05814s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118668s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0659748s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0789308s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0722437s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0753721s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.126193s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.139818s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.145285s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.174432s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.328522s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.262532s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.402934s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.405765s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.714061s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.594626s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.831692s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.686308s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.763812s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.921051s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.026s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00116725s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0899809s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.051157s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0680318s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.080151s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.090882s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.196324s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.189649s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.171507s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.255199s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.289792s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.389238s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.487337s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.470471s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.597916s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.828486s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.651916s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.77421s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.947423s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.04424s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119422s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0434508s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0563995s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0717558s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0743313s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.119046s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.121903s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.147188s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.186441s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.228798s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.274737s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.352679s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.473117s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.491258s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.554472s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.697101s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.671762s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.767865s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.86486s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.980483s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119518s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0493387s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0573145s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0753314s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0930577s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.118731s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.125005s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.165158s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.22281s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.204214s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.235962s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.388254s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.395986s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.59931s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.670809s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.646553s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.678891s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.882346s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.962821s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.992951s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118622s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0754336s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0565587s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0689163s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0871082s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0949079s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.111576s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.15261s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.172267s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.288031s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.340443s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.335841s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.486578s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.584102s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.718972s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.602794s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.642849s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.849331s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.861672s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.01753s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.0011628s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0677104s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.070859s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0680915s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.107099s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0943506s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.131769s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.153248s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.175601s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.207325s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.314133s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.349078s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.406333s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.435291s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.618589s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.621463s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.725279s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.791215s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.881329s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.972254s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119188s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0725502s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0715877s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0731064s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.127324s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.120177s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.1219s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.163684s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.201375s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.261806s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.287925s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.322345s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.407761s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.583517s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.656429s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.618566s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.74941s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.81803s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.89426s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.06621s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.0011909s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0489132s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.106049s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0759005s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0941753s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.117593s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.122151s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.169922s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.214163s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.289756s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.25691s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.383936s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.399485s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.50745s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.533593s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.581491s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.676008s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.766239s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.898334s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.99343s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119404s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0783593s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0585416s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0773298s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0824554s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.101041s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.131416s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.179916s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.216297s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.217388s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.332614s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.401013s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.415494s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.598887s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.675619s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.639564s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.656731s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.78201s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.893446s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.02227s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118162s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0463073s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0903604s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0592182s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0878269s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.10898s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.140179s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.143445s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.174069s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.211648s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.324272s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.387103s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.471177s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.589026s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.573474s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.739244s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.734862s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.784323s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.897681s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.939689s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118809s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0902117s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0739501s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0781925s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0976384s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0937624s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.105348s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.140133s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.18364s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.311895s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.361081s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.35339s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.409525s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.466441s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.625238s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.587864s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.643137s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.81985s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.890436s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.05474s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00122929s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0720023s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0633339s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0643491s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.080933s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.109509s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.130698s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.155772s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.167743s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.213484s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.318912s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.401948s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.443752s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.498133s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.588567s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.598255s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.65536s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.872561s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.901524s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.982273s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119358s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0708976s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0516655s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.112729s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.118185s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0856402s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.135912s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.165174s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.208047s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.219288s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.330588s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.328778s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.376666s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.491384s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.591145s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.581148s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.721237s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.759773s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.916033s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.960723s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118663s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0866003s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0566212s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.083891s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0814929s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.099801s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.138265s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.206267s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.168637s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.21165s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.328975s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.407784s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.403034s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.4781s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.680234s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.599394s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.703152s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.843721s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.88969s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.99829s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118757s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0573021s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0811577s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.117253s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.103101s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.123999s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.129861s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.19093s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.170423s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.221794s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.34108s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.319207s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.410032s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.498503s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.68778s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.611655s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.735215s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.830974s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.869658s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.03479s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119359s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0529373s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0592913s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0720485s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.105544s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.114512s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.164825s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.152844s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.208226s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.297532s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.377219s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.388376s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.403751s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.566335s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.609686s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.563417s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.657639s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.803274s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.882655s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.961688s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118791s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0568187s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.10463s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0642393s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0829687s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.097504s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.132623s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.15938s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.258674s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.29435s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.325422s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.331528s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.42031s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.479901s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.492306s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.675388s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.734445s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.777636s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.989338s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.968938s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119953s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0571328s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0814818s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0679349s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0795693s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0956185s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.117491s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.144852s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.172253s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.253938s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.26186s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.328535s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.469867s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.506215s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.572073s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.665894s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.677693s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.769213s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.861965s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.02004s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118683s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0677512s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0575007s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0903171s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0822749s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.118186s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.141287s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.16892s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.40572s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.301426s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.263716s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.340813s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.461181s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.485309s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.543431s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.640403s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.859874s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.666928s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.919881s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.999727s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119331s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0645515s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0779292s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0726896s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.088291s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0913403s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.110817s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.165655s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.208519s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.240258s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.283373s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.373722s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.489771s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.480998s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.721921s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.670228s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.632791s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.745962s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.897277s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.03964s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119324s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0500673s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0754975s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0654736s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0833285s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.11402s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.107417s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.215339s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.182735s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.214373s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.259415s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.339854s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.478038s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.50436s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.574075s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.575203s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.686554s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.840981s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.937637s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.03284s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119358s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0473835s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0988911s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.13295s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.084616s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.152123s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.113069s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.139856s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.216384s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.216031s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.328492s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.355155s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.431462s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.476697s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.696672s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=1.06683s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.67167s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.784407s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.947507s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.987033s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118654s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0537273s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0672941s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0739981s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0935179s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.113289s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.124641s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.153673s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.210955s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.213022s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.335128s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.434484s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.446923s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.481074s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.629847s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.581306s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.806747s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.797226s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.896399s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.973542s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119389s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0729922s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.078971s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0795371s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.096549s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.129323s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.111087s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.165213s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.230619s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.206846s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.336005s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.365909s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.395703s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.494815s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.578263s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.602732s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.613218s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.809854s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.94668s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.990438s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119436s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0579951s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0603262s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0931987s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0964152s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.087907s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.129249s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.153271s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.257265s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.227278s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.329216s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.319374s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.386394s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.473794s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.584613s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.578259s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.676388s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.773292s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.878923s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.979668s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00116643s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0667188s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0667877s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0675584s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.10697s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0945883s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.119467s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.138972s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.203017s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.257101s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.281519s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.341312s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.494172s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.478537s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.73927s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.751152s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.810929s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.791711s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.884612s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.01727s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118778s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0500698s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0688816s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0774107s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0907334s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.116999s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.128257s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.177875s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.167866s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.264331s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.269591s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.347429s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.43105s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.500044s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.505873s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.588659s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.670337s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.821691s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=1.03089s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.04604s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118923s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0479486s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.10555s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0630261s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0868534s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.112391s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.124527s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.138206s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.215248s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.241219s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.362266s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.328735s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.437478s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.613204s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.458902s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.601864s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.706767s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.8565s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.949308s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.990219s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00123207s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0630706s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0499737s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0690677s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.073594s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.127204s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.140583s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.211516s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.220868s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.236758s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.316826s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.40062s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.382514s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.500919s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.649568s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.651269s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.735704s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.840468s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.882889s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.01348s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119367s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0557861s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0935485s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.10109s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.082141s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.110144s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.109301s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.13658s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.172667s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.213095s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.261525s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.381367s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.380386s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.484908s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.567231s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.669792s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.644147s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.88007s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.923557s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.992878s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118677s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.068005s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0704237s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.121753s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0730095s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.090513s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.126288s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.138638s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.171241s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.255477s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.317434s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.353475s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.490069s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.646275s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.51724s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.557424s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.679802s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.75798s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.929803s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.973116s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119372s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0497263s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0552959s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0657435s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0757813s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0879199s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.113079s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.1386s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.199115s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.275661s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.450966s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.403457s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.484168s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.583627s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.666218s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.814624s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.721157s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.801279s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.930523s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.04344s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118767s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0546369s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0833552s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0886455s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0866053s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0947337s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.132855s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.151501s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.182152s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.20588s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.251214s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.391228s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.420735s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.49071s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.502474s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.569034s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.830897s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.848486s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.932426s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.99835s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119399s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0726979s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0674174s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0734416s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0884089s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.130754s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.129996s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.153322s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.21898s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.218734s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.262719s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.345038s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.393808s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.573852s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.569649s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.59981s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.897562s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.783822s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.914806s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.00565s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119357s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0847606s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.068791s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0798293s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.101975s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.109388s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.202557s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.151063s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.177983s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.207229s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.263378s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.351105s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.3852s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.484512s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.58855s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=1.02573s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.715887s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.763503s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.899868s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.00848s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119388s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0581567s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0589809s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0653644s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0901895s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0955984s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.125169s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.178098s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.301273s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.214741s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.326397s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.331377s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.465742s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.480373s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.435687s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.762476s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.671503s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.791633s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.91868s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.06193s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118745s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0656617s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0558465s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0747256s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0897649s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.177212s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.13134s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.160208s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.182138s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.246843s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.317147s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.329915s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.415181s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.487854s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.62863s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.596944s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.726256s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.790695s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.860877s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.04968s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00116672s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0683794s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0537575s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0630632s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0851478s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.10434s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.111391s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.152065s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.181229s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.214466s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.265026s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.324792s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.393005s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.585914s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.650345s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.553145s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.679148s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.794991s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.842896s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.04433s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00124358s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0468113s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0590646s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0803308s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0787419s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.12582s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.123869s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.169115s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.170709s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.265719s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.289397s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.330327s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.39503s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.497921s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.53705s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.581829s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.715573s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.845476s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.87439s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.02896s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118695s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0596066s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0547524s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0868432s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.106299s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.118473s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.164149s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.153646s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.168858s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.213624s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.28819s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.345373s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.513849s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.558087s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.666238s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.602411s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.707805s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.732856s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.877117s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.991969s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118376s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0823624s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0591475s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.05933s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0815458s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.113016s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.121057s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.146486s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.199885s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.256191s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.288896s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.347757s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.395441s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.572994s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.705277s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.643011s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.697266s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.773732s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.878931s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.03985s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118729s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0546767s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0884479s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0674258s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0829462s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0950918s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.132267s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.265889s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.183005s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.360926s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.281363s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.438666s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.406044s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.409396s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.519133s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.537761s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.687066s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.80724s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.869575s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.984991s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00116619s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0647837s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.064391s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.071406s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0895662s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.116889s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.120336s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.160454s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.181943s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.287302s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.332199s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.314427s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.387792s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.622113s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.706946s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.57418s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.796652s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.8628s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.936964s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.10925s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119539s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0507177s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0826946s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0837452s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.086061s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.115257s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.132033s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.140377s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.16775s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.240039s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.260558s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.355532s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.412289s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.543867s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.638207s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.503049s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.727926s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.818589s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.883074s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.13893s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118759s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.050961s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0552961s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.098706s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.103913s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0989917s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.130453s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.119333s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.173183s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.205673s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.295689s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.321821s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.417512s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.467883s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.553198s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.703057s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.641189s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.906376s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.84418s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.02967s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118607s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0676086s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0585723s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0784683s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0879765s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.126159s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.11048s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.147663s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.171825s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.220104s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.327697s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.327507s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.415321s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.614076s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.486091s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.589015s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.747061s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.75951s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.85435s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.972291s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119422s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0489291s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.101434s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0761674s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0823778s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0860979s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.137984s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.167891s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.307649s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.233128s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.352532s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.335935s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.470719s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.479235s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.659614s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.714782s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.695755s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.860092s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.839491s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.97081s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.0011941s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.085813s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0644463s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0655902s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0772178s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.107168s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.129649s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.138767s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.298185s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.21414s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.28314s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.326988s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.396011s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.509608s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.620268s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.627686s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.70148s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.795915s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.887625s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.996267s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118721s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0443571s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.058443s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0746167s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0898235s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.121735s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.133144s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.155226s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.204414s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.270502s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.263404s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.323373s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.410435s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.665272s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.587305s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.829209s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.702044s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.853397s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.916224s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.02773s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119445s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0679485s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.101895s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0858318s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0733043s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0936334s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.135065s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.182487s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.201571s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.21725s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.264475s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.382526s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.426507s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.593842s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.573378s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.897913s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.723643s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.797576s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.881855s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.05993s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00119408s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0538424s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0594268s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0992598s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0838883s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.100432s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.135044s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.165074s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.172189s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.213648s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.343013s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.381453s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.454644s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.465167s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.641183s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.703964s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.703345s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.759973s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.934849s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.0056s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118582s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0431134s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0612792s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0695891s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0853859s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.108213s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.167949s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.248352s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.228273s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.260935s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.333873s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.409196s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.405917s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.574826s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.518162s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.60213s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.643725s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.771731s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.902275s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.992368s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118606s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0605479s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.053001s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0702376s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0876083s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0974352s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.1297s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.135793s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.211244s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.332728s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.289733s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.340374s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.467834s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.586313s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.646597s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.690469s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.636481s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.852135s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.970875s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.02153s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00116751s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0495448s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0724837s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0655371s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0821404s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.118521s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.139463s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.16866s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.177964s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.216091s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.268308s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.400907s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.540134s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.474012s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.575195s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.565695s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.737236s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.840005s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.888652s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.998807s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118603s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0869325s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0492832s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.105476s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.135606s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0952074s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.143669s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.142797s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.19154s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.204586s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.256105s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.395897s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.476905s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.465752s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.616314s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.584836s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.791057s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.842454s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.858561s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.02609s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118651s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.064525s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0542262s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0638883s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0821498s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0934911s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.128895s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.159909s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.178305s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.318026s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.259969s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.387322s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.471996s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.606631s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.865245s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.729672s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.732119s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.843793s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.888553s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.01021s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118723s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0420346s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0710964s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0638413s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0986454s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0889237s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.108457s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.140157s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.161452s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.222265s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.288463s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.32755s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.49458s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.551649s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.568545s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.722482s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.785627s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.749064s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.880266s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=0.999184s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00120273s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0682565s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.0540172s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0726914s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0759159s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.110436s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.124031s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.158827s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.226162s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.286651s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.336476s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.324739s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.407416s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.476106s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.713788s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.586445s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.734403s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.800889s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.898665s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.04641s
+Threads num is 160
+Rank is 1999
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00118715s
+Threads num is 160
+Rank is 99
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0582405s
+Threads num is 160
+Rank is 199
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.066712s
+Threads num is 160
+Rank is 299
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0731901s
+Threads num is 160
+Rank is 399
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.0988936s
+Threads num is 160
+Rank is 499
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.142094s
+Threads num is 160
+Rank is 599
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.144607s
+Threads num is 160
+Rank is 699
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.163531s
+Threads num is 160
+Rank is 799
+GAUSS 900x900
+----------------------------------
+Time in seconds=0.173387s
+Threads num is 160
+Rank is 899
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.200031s
+Threads num is 160
+Rank is 999
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=0.279699s
+Threads num is 160
+Rank is 1099
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.319875s
+Threads num is 160
+Rank is 1199
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=0.477986s
+Threads num is 160
+Rank is 1299
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.479134s
+Threads num is 160
+Rank is 1399
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=0.588094s
+Threads num is 160
+Rank is 1499
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=0.581375s
+Threads num is 160
+Rank is 1599
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=0.742083s
+Threads num is 160
+Rank is 1699
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=0.748028s
+Threads num is 160
+Rank is 1799
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=0.842554s
+Threads num is 160
+Rank is 1899
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=1.00659s
+Threads num is 160
+Rank is 1999
+
+
+PS:
+
+Read file <my_job.815578.err> for stderr output of this job.
+

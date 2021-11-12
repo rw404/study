@@ -1,0 +1,141 @@
+
+
+
+########SEQUENTIAL#######
+GAUSS 100x100
+----------------------------------
+Time in seconds=0.00163s
+Rank is 99
+
+
+########SEQUENTIAL#######
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.013372s
+Rank is 199
+
+
+########SEQUENTIAL#######
+GAUSS 300x300
+----------------------------------
+Time in seconds=0.040261s
+Rank is 299
+
+
+########SEQUENTIAL#######
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.091136s
+Rank is 399
+
+
+########SEQUENTIAL#######
+GAUSS 500x500
+----------------------------------
+Time in seconds=0.17735s
+Rank is 499
+
+
+########SEQUENTIAL#######
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.307726s
+Rank is 599
+
+
+########SEQUENTIAL#######
+GAUSS 700x700
+----------------------------------
+Time in seconds=0.5092s
+Rank is 699
+
+
+########SEQUENTIAL#######
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.756928s
+Rank is 799
+
+
+########SEQUENTIAL#######
+GAUSS 900x900
+----------------------------------
+Time in seconds=1.08535s
+Rank is 899
+
+
+########SEQUENTIAL#######
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=1.50683s
+Rank is 999
+
+
+########SEQUENTIAL#######
+GAUSS 1100x1100
+----------------------------------
+Time in seconds=2.12848s
+Rank is 1099
+
+
+########SEQUENTIAL#######
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=2.66752s
+Rank is 1199
+
+
+########SEQUENTIAL#######
+GAUSS 1300x1300
+----------------------------------
+Time in seconds=3.31604s
+Rank is 1299
+
+
+########SEQUENTIAL#######
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=4.17814s
+Rank is 1399
+
+
+########SEQUENTIAL#######
+GAUSS 1500x1500
+----------------------------------
+Time in seconds=5.07711s
+Rank is 1499
+
+
+########SEQUENTIAL#######
+GAUSS 1600x1600
+----------------------------------
+Time in seconds=6.29504s
+Rank is 1599
+
+
+########SEQUENTIAL#######
+GAUSS 1700x1700
+----------------------------------
+Time in seconds=7.52129s
+Rank is 1699
+
+
+########SEQUENTIAL#######
+GAUSS 1800x1800
+----------------------------------
+Time in seconds=8.61379s
+Rank is 1799
+
+
+########SEQUENTIAL#######
+GAUSS 1900x1900
+----------------------------------
+Time in seconds=10.1702s
+Rank is 1899
+
+
+########SEQUENTIAL#######
+GAUSS 2000x2000
+----------------------------------
+Time in seconds=11.8892s
+Rank is 1999
