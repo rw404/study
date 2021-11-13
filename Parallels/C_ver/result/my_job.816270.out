@@ -1,0 +1,2892 @@
+Sender: LSF System <lsfadmin@polus-c2-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 816270: <#BSUB -n 1;#BSUB -W 00:15;#BSUB -o "./result/my_job.%J.out";#BSUB -e "./result/my_job.%J.err";#BSUB -R "span[hosts=1]";OMP_NUM_THREADS=2 ./parallel 200 2;OMP_NUM_THREADS=2 ./parallel 400 2;OMP_NUM_THREADS=2 ./parallel 600 2;OMP_NUM_THREADS=2 ./parallel 800 2;OMP_NUM_THREADS=2 ./parallel 1000 2;OMP_NUM_THREADS=2 ./parallel 1200 2;OMP_NUM_THREADS=2 ./parallel 1400 2;OMP_NUM_THREADS=4 ./parallel 200 4;OMP_NUM_THREADS=4 ./parallel 400 4;OMP_NUM_THREADS=4 ./parallel 600 4;OMP_NUM_THREADS=4 ./parallel 800 4;OMP_NUM_THREADS=4 ./parallel 1000 4;OMP_NUM_THREADS=4 ./parallel 1200 4;OMP_NUM_THREADS=4 ./parallel 1400 4;OMP_NUM_THREADS=6 ./parallel 200 6;OMP_NUM_THREADS=6 ./parallel 400 6;OMP_NUM_THREADS=6 ./parallel 600 6;OMP_NUM_THREADS=6 ./parallel 800 6;OMP_NUM_THREADS=6 ./parallel 1000 6;OMP_NUM_THREADS=6 ./parallel 1200 6;OMP_NUM_THREADS=6 ./parallel 1400 6;OMP_NUM_THREADS=8 ./parallel 200 8;OMP_NUM_THREADS=8 ./parallel 400 8;OMP_NUM_THREADS=8 ./parallel 600 8;OMP_NUM_THREADS=8 ./parallel 800 8;OMP_NUM_THREADS=8 ./parallel 1000 8;OMP_NUM_THREADS=8 ./parallel 1200 8;OMP_NUM_THREADS=8 ./parallel 1400 8;OMP_NUM_THREADS=10 ./parallel 200 10;OMP_NUM_THREADS=10 ./parallel 400 10;OMP_NUM_THREADS=10 ./parallel 600 10;OMP_NUM_THREADS=10 ./parallel 800 10;OMP_NUM_THREADS=10 ./parallel 1000 10;OMP_NUM_THREADS=10 ./parallel 1200 10;OMP_NUM_THREADS=10 ./parallel 1400 10;OMP_NUM_THREADS=12 ./parallel 200 12;OMP_NUM_THREADS=12 ./parallel 400 12;OMP_NUM_THREADS=12 ./parallel 600 12;OMP_NUM_THREADS=12 ./parallel 800 12;OMP_NUM_THREADS=12 ./parallel 1000 12;OMP_NUM_THREADS=12 ./parallel 1200 12;OMP_NUM_THREADS=12 ./parallel 1400 12;OMP_NUM_THREADS=14 ./parallel 200 14;OMP_NUM_THREADS=14 ./parallel 400 14;OMP_NUM_THREADS=14 ./parallel 600 14;OMP_NUM_THREADS=14 ./parallel 800 14;OMP_NUM_THREADS=14 ./parallel 1000 14;OMP_NUM_THREADS=14 ./parallel 1200 14;OMP_NUM_THREADS=14 ./parallel 1400 14;OMP_NUM_THREADS=16 ./parallel 200 16;OMP_NUM_THREADS=16 ./parallel 400 16;OMP_NUM_THREADS=16 ./parallel 600 16;OMP_NUM_THREADS=16 ./parallel 800 16;OMP_NUM_THREADS=16 ./parallel 1000 16;OMP_NUM_THREADS=16 ./parallel 1200 16;OMP_NUM_THREADS=16 ./parallel 1400 16;OMP_NUM_THREADS=18 ./parallel 200 18;OMP_NUM_THREADS=18 ./parallel 400 18;OMP_NUM_THREADS=18 ./parallel 600 18;OMP_NUM_THREADS=18 ./parallel 800 18;OMP_NUM_THREADS=18 ./parallel 1000 18;OMP_NUM_THREADS=18 ./parallel 1200 18;OMP_NUM_THREADS=18 ./parallel 1400 18;OMP_NUM_THREADS=20 ./parallel 200 20;OMP_NUM_THREADS=20 ./parallel 400 20;OMP_NUM_THREADS=20 ./parallel 600 20;OMP_NUM_THREADS=20 ./parallel 800 20;OMP_NUM_THREADS=20 ./parallel 1000 20;OMP_NUM_THREADS=20 ./parallel 1200 20;OMP_NUM_THREADS=20 ./parallel 1400 20;OMP_NUM_THREADS=22 ./parallel 200 22;OMP_NUM_THREADS=22 ./parallel 400 22;OMP_NUM_THREADS=22 ./parallel 600 22;OMP_NUM_THREADS=22 ./parallel 800 22;OMP_NUM_THREADS=22 ./parallel 1000 22;OMP_NUM_THREADS=22 ./parallel 1200 22;OMP_NUM_THREADS=22 ./parallel 1400 22;OMP_NUM_THREADS=24 ./parallel 200 24;OMP_NUM_THREADS=24 ./parallel 400 24;OMP_NUM_THREADS=24 ./parallel 600 24;OMP_NUM_THREADS=24 ./parallel 800 24;OMP_NUM_THREADS=24 ./parallel 1000 24;OMP_NUM_THREADS=24 ./parallel 1200 24;OMP_NUM_THREADS=24 ./parallel 1400 24;OMP_NUM_THREADS=26 ./parallel 200 26;OMP_NUM_THREADS=26 ./parallel 400 26;OMP_NUM_THREADS=26 ./parallel 600 26;OMP_NUM_THREADS=26 ./parallel 800 26;OMP_NUM_THREADS=26 ./parallel 1000 26;OMP_NUM_THREADS=26 ./parallel 1200 26;OMP_NUM_THREADS=26 ./parallel 1400 26;OMP_NUM_THREADS=28 ./parallel 200 28;OMP_NUM_THREADS=28 ./parallel 400 28;OMP_NUM_THREADS=28 ./parallel 600 28;OMP_NUM_THREADS=28 ./parallel 800 28;OMP_NUM_THREADS=28 ./parallel 1000 28;OMP_NUM_THREADS=28 ./parallel 1200 28;OMP_NUM_THREADS=28 ./parallel 1400 28;OMP_NUM_THREADS=30 ./parallel 200 30;OMP_NUM_THREADS=30 ./parallel 400 30;OMP_NUM_THREADS=30 ./parallel 600 30;OMP_NUM_THREADS=30 ./parallel 800 30;OMP_NUM_THREADS=30 ./parallel 1000 30;OMP_NUM_THREADS=30 ./parallel 1200 30;OMP_NUM_THREADS=30 ./parallel 1400 30;OMP_NUM_THREADS=32 ./parallel 200 32;OMP_NUM_THREADS=32 ./parallel 400 32;OMP_N> in cluster <MSUCluster> Done
+
+Job <#BSUB -n 1;#BSUB -W 00:15;#BSUB -o "./result/my_job.%J.out";#BSUB -e "./result/my_job.%J.err";#BSUB -R "span[hosts=1]";OMP_NUM_THREADS=2 ./parallel 200 2;OMP_NUM_THREADS=2 ./parallel 400 2;OMP_NUM_THREADS=2 ./parallel 600 2;OMP_NUM_THREADS=2 ./parallel 800 2;OMP_NUM_THREADS=2 ./parallel 1000 2;OMP_NUM_THREADS=2 ./parallel 1200 2;OMP_NUM_THREADS=2 ./parallel 1400 2;OMP_NUM_THREADS=4 ./parallel 200 4;OMP_NUM_THREADS=4 ./parallel 400 4;OMP_NUM_THREADS=4 ./parallel 600 4;OMP_NUM_THREADS=4 ./parallel 800 4;OMP_NUM_THREADS=4 ./parallel 1000 4;OMP_NUM_THREADS=4 ./parallel 1200 4;OMP_NUM_THREADS=4 ./parallel 1400 4;OMP_NUM_THREADS=6 ./parallel 200 6;OMP_NUM_THREADS=6 ./parallel 400 6;OMP_NUM_THREADS=6 ./parallel 600 6;OMP_NUM_THREADS=6 ./parallel 800 6;OMP_NUM_THREADS=6 ./parallel 1000 6;OMP_NUM_THREADS=6 ./parallel 1200 6;OMP_NUM_THREADS=6 ./parallel 1400 6;OMP_NUM_THREADS=8 ./parallel 200 8;OMP_NUM_THREADS=8 ./parallel 400 8;OMP_NUM_THREADS=8 ./parallel 600 8;OMP_NUM_THREADS=8 ./parallel 800 8;OMP_NUM_THREADS=8 ./parallel 1000 8;OMP_NUM_THREADS=8 ./parallel 1200 8;OMP_NUM_THREADS=8 ./parallel 1400 8;OMP_NUM_THREADS=10 ./parallel 200 10;OMP_NUM_THREADS=10 ./parallel 400 10;OMP_NUM_THREADS=10 ./parallel 600 10;OMP_NUM_THREADS=10 ./parallel 800 10;OMP_NUM_THREADS=10 ./parallel 1000 10;OMP_NUM_THREADS=10 ./parallel 1200 10;OMP_NUM_THREADS=10 ./parallel 1400 10;OMP_NUM_THREADS=12 ./parallel 200 12;OMP_NUM_THREADS=12 ./parallel 400 12;OMP_NUM_THREADS=12 ./parallel 600 12;OMP_NUM_THREADS=12 ./parallel 800 12;OMP_NUM_THREADS=12 ./parallel 1000 12;OMP_NUM_THREADS=12 ./parallel 1200 12;OMP_NUM_THREADS=12 ./parallel 1400 12;OMP_NUM_THREADS=14 ./parallel 200 14;OMP_NUM_THREADS=14 ./parallel 400 14;OMP_NUM_THREADS=14 ./parallel 600 14;OMP_NUM_THREADS=14 ./parallel 800 14;OMP_NUM_THREADS=14 ./parallel 1000 14;OMP_NUM_THREADS=14 ./parallel 1200 14;OMP_NUM_THREADS=14 ./parallel 1400 14;OMP_NUM_THREADS=16 ./parallel 200 16;OMP_NUM_THREADS=16 ./parallel 400 16;OMP_NUM_THREADS=16 ./parallel 600 16;OMP_NUM_THREADS=16 ./parallel 800 16;OMP_NUM_THREADS=16 ./parallel 1000 16;OMP_NUM_THREADS=16 ./parallel 1200 16;OMP_NUM_THREADS=16 ./parallel 1400 16;OMP_NUM_THREADS=18 ./parallel 200 18;OMP_NUM_THREADS=18 ./parallel 400 18;OMP_NUM_THREADS=18 ./parallel 600 18;OMP_NUM_THREADS=18 ./parallel 800 18;OMP_NUM_THREADS=18 ./parallel 1000 18;OMP_NUM_THREADS=18 ./parallel 1200 18;OMP_NUM_THREADS=18 ./parallel 1400 18;OMP_NUM_THREADS=20 ./parallel 200 20;OMP_NUM_THREADS=20 ./parallel 400 20;OMP_NUM_THREADS=20 ./parallel 600 20;OMP_NUM_THREADS=20 ./parallel 800 20;OMP_NUM_THREADS=20 ./parallel 1000 20;OMP_NUM_THREADS=20 ./parallel 1200 20;OMP_NUM_THREADS=20 ./parallel 1400 20;OMP_NUM_THREADS=22 ./parallel 200 22;OMP_NUM_THREADS=22 ./parallel 400 22;OMP_NUM_THREADS=22 ./parallel 600 22;OMP_NUM_THREADS=22 ./parallel 800 22;OMP_NUM_THREADS=22 ./parallel 1000 22;OMP_NUM_THREADS=22 ./parallel 1200 22;OMP_NUM_THREADS=22 ./parallel 1400 22;OMP_NUM_THREADS=24 ./parallel 200 24;OMP_NUM_THREADS=24 ./parallel 400 24;OMP_NUM_THREADS=24 ./parallel 600 24;OMP_NUM_THREADS=24 ./parallel 800 24;OMP_NUM_THREADS=24 ./parallel 1000 24;OMP_NUM_THREADS=24 ./parallel 1200 24;OMP_NUM_THREADS=24 ./parallel 1400 24;OMP_NUM_THREADS=26 ./parallel 200 26;OMP_NUM_THREADS=26 ./parallel 400 26;OMP_NUM_THREADS=26 ./parallel 600 26;OMP_NUM_THREADS=26 ./parallel 800 26;OMP_NUM_THREADS=26 ./parallel 1000 26;OMP_NUM_THREADS=26 ./parallel 1200 26;OMP_NUM_THREADS=26 ./parallel 1400 26;OMP_NUM_THREADS=28 ./parallel 200 28;OMP_NUM_THREADS=28 ./parallel 400 28;OMP_NUM_THREADS=28 ./parallel 600 28;OMP_NUM_THREADS=28 ./parallel 800 28;OMP_NUM_THREADS=28 ./parallel 1000 28;OMP_NUM_THREADS=28 ./parallel 1200 28;OMP_NUM_THREADS=28 ./parallel 1400 28;OMP_NUM_THREADS=30 ./parallel 200 30;OMP_NUM_THREADS=30 ./parallel 400 30;OMP_NUM_THREADS=30 ./parallel 600 30;OMP_NUM_THREADS=30 ./parallel 800 30;OMP_NUM_THREADS=30 ./parallel 1000 30;OMP_NUM_THREADS=30 ./parallel 1200 30;OMP_NUM_THREADS=30 ./parallel 1400 30;OMP_NUM_THREADS=32 ./parallel 200 32;OMP_NUM_THREADS=32 ./parallel 400 32;OMP_N> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skpod21-320-20> in cluster <MSUCluster> at Sat Nov 13 12:46:54 2021
+Job was executed on host(s) <polus-c2-ib.bmc.hpc.cs.msu.ru>, in queue <short>, as user <edu-cmc-skpod21-320-20> in cluster <MSUCluster> at Sat Nov 13 12:46:54 2021
+</home_edu/edu-cmc-skpod21-320/edu-cmc-skpod21-320-20> was used as the home directory.
+</home_edu/edu-cmc-skpod21-320/edu-cmc-skpod21-320-20> was used as the working directory.
+Started at Sat Nov 13 12:46:54 2021
+Terminated at Sat Nov 13 12:49:41 2021
+Results reported at Sat Nov 13 12:49:41 2021
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#BSUB -n 1
+#BSUB -W 00:15
+#BSUB -o "./result/my_job.%J.out"
+#BSUB -e "./result/my_job.%J.err"
+#BSUB -R "span[hosts=1]"
+OMP_NUM_THREADS=2 ./parallel 200 2
+OMP_NUM_THREADS=2 ./parallel 400 2
+OMP_NUM_THREADS=2 ./parallel 600 2
+OMP_NUM_THREADS=2 ./parallel 800 2
+OMP_NUM_THREADS=2 ./parallel 1000 2
+OMP_NUM_THREADS=2 ./parallel 1200 2
+OMP_NUM_THREADS=2 ./parallel 1400 2
+OMP_NUM_THREADS=4 ./parallel 200 4
+OMP_NUM_THREADS=4 ./parallel 400 4
+OMP_NUM_THREADS=4 ./parallel 600 4
+OMP_NUM_THREADS=4 ./parallel 800 4
+OMP_NUM_THREADS=4 ./parallel 1000 4
+OMP_NUM_THREADS=4 ./parallel 1200 4
+OMP_NUM_THREADS=4 ./parallel 1400 4
+OMP_NUM_THREADS=6 ./parallel 200 6
+OMP_NUM_THREADS=6 ./parallel 400 6
+OMP_NUM_THREADS=6 ./parallel 600 6
+OMP_NUM_THREADS=6 ./parallel 800 6
+OMP_NUM_THREADS=6 ./parallel 1000 6
+OMP_NUM_THREADS=6 ./parallel 1200 6
+OMP_NUM_THREADS=6 ./parallel 1400 6
+OMP_NUM_THREADS=8 ./parallel 200 8
+OMP_NUM_THREADS=8 ./parallel 400 8
+OMP_NUM_THREADS=8 ./parallel 600 8
+OMP_NUM_THREADS=8 ./parallel 800 8
+OMP_NUM_THREADS=8 ./parallel 1000 8
+OMP_NUM_THREADS=8 ./parallel 1200 8
+OMP_NUM_THREADS=8 ./parallel 1400 8
+OMP_NUM_THREADS=10 ./parallel 200 10
+OMP_NUM_THREADS=10 ./parallel 400 10
+OMP_NUM_THREADS=10 ./parallel 600 10
+OMP_NUM_THREADS=10 ./parallel 800 10
+OMP_NUM_THREADS=10 ./parallel 1000 10
+OMP_NUM_THREADS=10 ./parallel 1200 10
+OMP_NUM_THREADS=10 ./parallel 1400 10
+OMP_NUM_THREADS=12 ./parallel 200 12
+OMP_NUM_THREADS=12 ./parallel 400 12
+OMP_NUM_THREADS=12 ./parallel 600 12
+OMP_NUM_THREADS=12 ./parallel 800 12
+OMP_NUM_THREADS=12 ./parallel 1000 12
+OMP_NUM_THREADS=12 ./parallel 1200 12
+OMP_NUM_THREADS=12 ./parallel 1400 12
+OMP_NUM_THREADS=14 ./parallel 200 14
+OMP_NUM_THREADS=14 ./parallel 400 14
+OMP_NUM_THREADS=14 ./parallel 600 14
+
+(... more ...)
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   7182.74 sec.
+    Max Memory :                                 30 MB
+    Average Memory :                             19.69 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              4
+    Max Threads :                                160
+    Run time :                                   167 sec.
+    Turnaround time :                            167 sec.
+
+The output (if any) follows:
+
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00980572s
+Threads num is 2
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0657993s
+Threads num is 2
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.119996s
+Threads num is 2
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.283128s
+Threads num is 2
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.58948s
+Threads num is 2
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.993648s
+Threads num is 2
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=1.55547s
+Threads num is 2
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00451416s
+Threads num is 4
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.033191s
+Threads num is 4
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.110304s
+Threads num is 4
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.260148s
+Threads num is 4
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.489455s
+Threads num is 4
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.856728s
+Threads num is 4
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=1.24041s
+Threads num is 4
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00605227s
+Threads num is 6
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0230303s
+Threads num is 6
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.128182s
+Threads num is 6
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.175828s
+Threads num is 6
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.343524s
+Threads num is 6
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.591248s
+Threads num is 6
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=1.14028s
+Threads num is 6
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00493924s
+Threads num is 8
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0340782s
+Threads num is 8
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.112104s
+Threads num is 8
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.263093s
+Threads num is 8
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.51257s
+Threads num is 8
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.742516s
+Threads num is 8
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=1.08463s
+Threads num is 8
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00423549s
+Threads num is 10
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0274447s
+Threads num is 10
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0912826s
+Threads num is 10
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.222353s
+Threads num is 10
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.412669s
+Threads num is 10
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.711202s
+Threads num is 10
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=1.13722s
+Threads num is 10
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00439019s
+Threads num is 12
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0233748s
+Threads num is 12
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0814744s
+Threads num is 12
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.271873s
+Threads num is 12
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.351521s
+Threads num is 12
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.673548s
+Threads num is 12
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.947875s
+Threads num is 12
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00472911s
+Threads num is 14
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0308495s
+Threads num is 14
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.100845s
+Threads num is 14
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.23393s
+Threads num is 14
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.414962s
+Threads num is 14
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.675419s
+Threads num is 14
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=1.241s
+Threads num is 14
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00436841s
+Threads num is 16
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0274201s
+Threads num is 16
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0885448s
+Threads num is 16
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.265302s
+Threads num is 16
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.398567s
+Threads num is 16
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.697318s
+Threads num is 16
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=1.23792s
+Threads num is 16
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00411275s
+Threads num is 18
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0312391s
+Threads num is 18
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.081336s
+Threads num is 18
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.238482s
+Threads num is 18
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.397395s
+Threads num is 18
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.74288s
+Threads num is 18
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=1.05354s
+Threads num is 18
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00495599s
+Threads num is 20
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0287181s
+Threads num is 20
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0982359s
+Threads num is 20
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.215104s
+Threads num is 20
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.415229s
+Threads num is 20
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.54913s
+Threads num is 20
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.89648s
+Threads num is 20
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00805471s
+Threads num is 22
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0416423s
+Threads num is 22
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0864496s
+Threads num is 22
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.19839s
+Threads num is 22
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.384839s
+Threads num is 22
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.66274s
+Threads num is 22
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=1.0425s
+Threads num is 22
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00456696s
+Threads num is 24
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0255153s
+Threads num is 24
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.167535s
+Threads num is 24
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.283025s
+Threads num is 24
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.394911s
+Threads num is 24
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.633745s
+Threads num is 24
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.954483s
+Threads num is 24
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00479366s
+Threads num is 26
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0370145s
+Threads num is 26
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0726092s
+Threads num is 26
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.198492s
+Threads num is 26
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.340236s
+Threads num is 26
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.585257s
+Threads num is 26
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.906561s
+Threads num is 26
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00810045s
+Threads num is 28
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0613271s
+Threads num is 28
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.110652s
+Threads num is 28
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.287419s
+Threads num is 28
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.319535s
+Threads num is 28
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.508959s
+Threads num is 28
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.848551s
+Threads num is 28
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0137235s
+Threads num is 30
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0355068s
+Threads num is 30
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.1198s
+Threads num is 30
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.297739s
+Threads num is 30
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.4441s
+Threads num is 30
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.682142s
+Threads num is 30
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.755296s
+Threads num is 30
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0247344s
+Threads num is 32
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0439348s
+Threads num is 32
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.093428s
+Threads num is 32
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.211771s
+Threads num is 32
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.291653s
+Threads num is 32
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.457503s
+Threads num is 32
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.723506s
+Threads num is 32
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00734912s
+Threads num is 34
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0294546s
+Threads num is 34
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0880946s
+Threads num is 34
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.1374s
+Threads num is 34
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.252436s
+Threads num is 34
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.427871s
+Threads num is 34
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.684818s
+Threads num is 34
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00562626s
+Threads num is 36
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0299588s
+Threads num is 36
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0588989s
+Threads num is 36
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.124032s
+Threads num is 36
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.244587s
+Threads num is 36
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.425897s
+Threads num is 36
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.658377s
+Threads num is 36
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00693557s
+Threads num is 38
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0282806s
+Threads num is 38
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0527278s
+Threads num is 38
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.181215s
+Threads num is 38
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.230253s
+Threads num is 38
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.457723s
+Threads num is 38
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.613622s
+Threads num is 38
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00586998s
+Threads num is 40
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0173576s
+Threads num is 40
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0781109s
+Threads num is 40
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.172206s
+Threads num is 40
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.226495s
+Threads num is 40
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.378802s
+Threads num is 40
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.59905s
+Threads num is 40
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00405462s
+Threads num is 42
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0486795s
+Threads num is 42
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.11014s
+Threads num is 42
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.246157s
+Threads num is 42
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.169887s
+Threads num is 42
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.43348s
+Threads num is 42
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.698583s
+Threads num is 42
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0039869s
+Threads num is 44
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.174862s
+Threads num is 44
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.132584s
+Threads num is 44
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.294284s
+Threads num is 44
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.337753s
+Threads num is 44
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.565167s
+Threads num is 44
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.814404s
+Threads num is 44
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.007697s
+Threads num is 46
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0366612s
+Threads num is 46
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0719006s
+Threads num is 46
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.203318s
+Threads num is 46
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.296546s
+Threads num is 46
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.433883s
+Threads num is 46
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.553088s
+Threads num is 46
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0295087s
+Threads num is 48
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0518743s
+Threads num is 48
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.102642s
+Threads num is 48
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.215127s
+Threads num is 48
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.446263s
+Threads num is 48
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.561391s
+Threads num is 48
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.591662s
+Threads num is 48
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0149617s
+Threads num is 50
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0889476s
+Threads num is 50
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.151956s
+Threads num is 50
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.24071s
+Threads num is 50
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.346654s
+Threads num is 50
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.559503s
+Threads num is 50
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.809855s
+Threads num is 50
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0104171s
+Threads num is 52
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0355712s
+Threads num is 52
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0825736s
+Threads num is 52
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.246814s
+Threads num is 52
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.376539s
+Threads num is 52
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.536354s
+Threads num is 52
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.55976s
+Threads num is 52
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0495377s
+Threads num is 54
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0834896s
+Threads num is 54
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.150634s
+Threads num is 54
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.260615s
+Threads num is 54
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.413979s
+Threads num is 54
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.604387s
+Threads num is 54
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.906386s
+Threads num is 54
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0357564s
+Threads num is 56
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0746903s
+Threads num is 56
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.129443s
+Threads num is 56
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.223247s
+Threads num is 56
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.313994s
+Threads num is 56
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.51785s
+Threads num is 56
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.842541s
+Threads num is 56
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0354826s
+Threads num is 58
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0783087s
+Threads num is 58
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.12256s
+Threads num is 58
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.181072s
+Threads num is 58
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.331151s
+Threads num is 58
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.55921s
+Threads num is 58
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.793123s
+Threads num is 58
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0282779s
+Threads num is 60
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0550256s
+Threads num is 60
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.105261s
+Threads num is 60
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.210456s
+Threads num is 60
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.219962s
+Threads num is 60
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.454987s
+Threads num is 60
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.747074s
+Threads num is 60
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0458019s
+Threads num is 62
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0550514s
+Threads num is 62
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0614527s
+Threads num is 62
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.327719s
+Threads num is 62
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.388829s
+Threads num is 62
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.452941s
+Threads num is 62
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.582998s
+Threads num is 62
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0575338s
+Threads num is 64
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.09859s
+Threads num is 64
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.140563s
+Threads num is 64
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.172996s
+Threads num is 64
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.418334s
+Threads num is 64
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.481379s
+Threads num is 64
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.856734s
+Threads num is 64
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0532079s
+Threads num is 66
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0808662s
+Threads num is 66
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.111412s
+Threads num is 66
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.167623s
+Threads num is 66
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.453827s
+Threads num is 66
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.293693s
+Threads num is 66
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.721388s
+Threads num is 66
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.082625s
+Threads num is 68
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.045353s
+Threads num is 68
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.148079s
+Threads num is 68
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.218665s
+Threads num is 68
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.494997s
+Threads num is 68
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.503409s
+Threads num is 68
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.645145s
+Threads num is 68
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.00690458s
+Threads num is 70
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.161479s
+Threads num is 70
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.160263s
+Threads num is 70
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.246048s
+Threads num is 70
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.384793s
+Threads num is 70
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.401091s
+Threads num is 70
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.791153s
+Threads num is 70
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.012428s
+Threads num is 72
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.128994s
+Threads num is 72
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.175706s
+Threads num is 72
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.251098s
+Threads num is 72
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.497458s
+Threads num is 72
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.503402s
+Threads num is 72
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.783757s
+Threads num is 72
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0634779s
+Threads num is 74
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0378914s
+Threads num is 74
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.210243s
+Threads num is 74
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.213553s
+Threads num is 74
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.378428s
+Threads num is 74
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.57597s
+Threads num is 74
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.59145s
+Threads num is 74
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0582397s
+Threads num is 76
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0837112s
+Threads num is 76
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0824932s
+Threads num is 76
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.325375s
+Threads num is 76
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.283627s
+Threads num is 76
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.571647s
+Threads num is 76
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.543106s
+Threads num is 76
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.04533s
+Threads num is 78
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0219763s
+Threads num is 78
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.174678s
+Threads num is 78
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.162435s
+Threads num is 78
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.365903s
+Threads num is 78
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.495974s
+Threads num is 78
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.647488s
+Threads num is 78
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0387375s
+Threads num is 80
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0228753s
+Threads num is 80
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.107916s
+Threads num is 80
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.228771s
+Threads num is 80
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.347648s
+Threads num is 80
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.586499s
+Threads num is 80
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.705641s
+Threads num is 80
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0333321s
+Threads num is 82
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0865444s
+Threads num is 82
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.137044s
+Threads num is 82
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.223822s
+Threads num is 82
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.30924s
+Threads num is 82
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.554972s
+Threads num is 82
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.769524s
+Threads num is 82
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0650294s
+Threads num is 84
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0586331s
+Threads num is 84
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.145355s
+Threads num is 84
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.196674s
+Threads num is 84
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.364318s
+Threads num is 84
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.74481s
+Threads num is 84
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.742701s
+Threads num is 84
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0446815s
+Threads num is 86
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0847654s
+Threads num is 86
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.135106s
+Threads num is 86
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.233753s
+Threads num is 86
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.418253s
+Threads num is 86
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.431452s
+Threads num is 86
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.828075s
+Threads num is 86
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0570885s
+Threads num is 88
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0456666s
+Threads num is 88
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0838625s
+Threads num is 88
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.227382s
+Threads num is 88
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.44871s
+Threads num is 88
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.597027s
+Threads num is 88
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.898691s
+Threads num is 88
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0722477s
+Threads num is 90
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.117801s
+Threads num is 90
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.119095s
+Threads num is 90
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.235541s
+Threads num is 90
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.388846s
+Threads num is 90
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.598433s
+Threads num is 90
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.811493s
+Threads num is 90
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0513292s
+Threads num is 92
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0656188s
+Threads num is 92
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.115563s
+Threads num is 92
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.19932s
+Threads num is 92
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.296031s
+Threads num is 92
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.568798s
+Threads num is 92
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.662924s
+Threads num is 92
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0583788s
+Threads num is 94
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0889659s
+Threads num is 94
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.163541s
+Threads num is 94
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.188877s
+Threads num is 94
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.301695s
+Threads num is 94
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.612812s
+Threads num is 94
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.891906s
+Threads num is 94
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0380076s
+Threads num is 96
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.044176s
+Threads num is 96
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0924549s
+Threads num is 96
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.200786s
+Threads num is 96
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.481284s
+Threads num is 96
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.677567s
+Threads num is 96
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=1.04245s
+Threads num is 96
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0412514s
+Threads num is 98
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0283312s
+Threads num is 98
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.136486s
+Threads num is 98
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.214552s
+Threads num is 98
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.237269s
+Threads num is 98
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.370882s
+Threads num is 98
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.5601s
+Threads num is 98
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0101844s
+Threads num is 100
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0337678s
+Threads num is 100
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0851706s
+Threads num is 100
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.124465s
+Threads num is 100
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.223365s
+Threads num is 100
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.310878s
+Threads num is 100
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.555824s
+Threads num is 100
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.015518s
+Threads num is 102
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0566717s
+Threads num is 102
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0955524s
+Threads num is 102
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.133689s
+Threads num is 102
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.249732s
+Threads num is 102
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.355471s
+Threads num is 102
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.616326s
+Threads num is 102
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0109082s
+Threads num is 104
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0468065s
+Threads num is 104
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.126662s
+Threads num is 104
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.13896s
+Threads num is 104
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.232636s
+Threads num is 104
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.249487s
+Threads num is 104
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.471542s
+Threads num is 104
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0138206s
+Threads num is 106
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0520825s
+Threads num is 106
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.100151s
+Threads num is 106
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.159552s
+Threads num is 106
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.245955s
+Threads num is 106
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.498768s
+Threads num is 106
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.616108s
+Threads num is 106
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0322694s
+Threads num is 108
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0485157s
+Threads num is 108
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.112216s
+Threads num is 108
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.147653s
+Threads num is 108
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.268122s
+Threads num is 108
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.409625s
+Threads num is 108
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.601327s
+Threads num is 108
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0465611s
+Threads num is 110
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0560367s
+Threads num is 110
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0760697s
+Threads num is 110
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.137712s
+Threads num is 110
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.21012s
+Threads num is 110
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.337728s
+Threads num is 110
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.554028s
+Threads num is 110
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0393146s
+Threads num is 112
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0552104s
+Threads num is 112
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0782993s
+Threads num is 112
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.131676s
+Threads num is 112
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.221141s
+Threads num is 112
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.400082s
+Threads num is 112
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.564132s
+Threads num is 112
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0351484s
+Threads num is 114
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.054494s
+Threads num is 114
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0786504s
+Threads num is 114
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.192591s
+Threads num is 114
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.215485s
+Threads num is 114
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.47529s
+Threads num is 114
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.485898s
+Threads num is 114
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0366534s
+Threads num is 116
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0635324s
+Threads num is 116
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0859937s
+Threads num is 116
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.202175s
+Threads num is 116
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.238791s
+Threads num is 116
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.567799s
+Threads num is 116
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.515492s
+Threads num is 116
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0325568s
+Threads num is 118
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0553293s
+Threads num is 118
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0948103s
+Threads num is 118
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.155298s
+Threads num is 118
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.235107s
+Threads num is 118
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.401855s
+Threads num is 118
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.571977s
+Threads num is 118
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0320752s
+Threads num is 120
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0570629s
+Threads num is 120
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0808356s
+Threads num is 120
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.129634s
+Threads num is 120
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.175416s
+Threads num is 120
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.360019s
+Threads num is 120
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.468812s
+Threads num is 120
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0351034s
+Threads num is 122
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0669921s
+Threads num is 122
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.122535s
+Threads num is 122
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.178737s
+Threads num is 122
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.241657s
+Threads num is 122
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.472497s
+Threads num is 122
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.524885s
+Threads num is 122
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0463254s
+Threads num is 124
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0593337s
+Threads num is 124
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0836524s
+Threads num is 124
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.137311s
+Threads num is 124
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.255861s
+Threads num is 124
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.333716s
+Threads num is 124
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.583801s
+Threads num is 124
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0547781s
+Threads num is 126
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0775968s
+Threads num is 126
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.119356s
+Threads num is 126
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.288123s
+Threads num is 126
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.241647s
+Threads num is 126
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.364705s
+Threads num is 126
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.560494s
+Threads num is 126
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0666675s
+Threads num is 128
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0468442s
+Threads num is 128
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.108425s
+Threads num is 128
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.166216s
+Threads num is 128
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.24722s
+Threads num is 128
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.407926s
+Threads num is 128
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.538566s
+Threads num is 128
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.039747s
+Threads num is 130
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0733747s
+Threads num is 130
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.102028s
+Threads num is 130
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.152162s
+Threads num is 130
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.230497s
+Threads num is 130
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.446464s
+Threads num is 130
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.625491s
+Threads num is 130
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0906958s
+Threads num is 132
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.103253s
+Threads num is 132
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.204525s
+Threads num is 132
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.16766s
+Threads num is 132
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.247544s
+Threads num is 132
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.61352s
+Threads num is 132
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.855209s
+Threads num is 132
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0373366s
+Threads num is 134
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.073321s
+Threads num is 134
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0871529s
+Threads num is 134
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.264434s
+Threads num is 134
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.291612s
+Threads num is 134
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.391069s
+Threads num is 134
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.683449s
+Threads num is 134
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0430546s
+Threads num is 136
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0812208s
+Threads num is 136
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.123971s
+Threads num is 136
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.1277s
+Threads num is 136
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.27962s
+Threads num is 136
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.44796s
+Threads num is 136
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.58776s
+Threads num is 136
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.103448s
+Threads num is 138
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.092134s
+Threads num is 138
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.12538s
+Threads num is 138
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.201956s
+Threads num is 138
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.325195s
+Threads num is 138
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.39795s
+Threads num is 138
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.434857s
+Threads num is 138
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0817775s
+Threads num is 140
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0699179s
+Threads num is 140
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.08319s
+Threads num is 140
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.135464s
+Threads num is 140
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.219989s
+Threads num is 140
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.376126s
+Threads num is 140
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.448367s
+Threads num is 140
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0692459s
+Threads num is 142
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0572119s
+Threads num is 142
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.109885s
+Threads num is 142
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.152362s
+Threads num is 142
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.260404s
+Threads num is 142
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.335489s
+Threads num is 142
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.453861s
+Threads num is 142
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0557971s
+Threads num is 144
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0859727s
+Threads num is 144
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0954625s
+Threads num is 144
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.152206s
+Threads num is 144
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.350856s
+Threads num is 144
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.35675s
+Threads num is 144
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.407997s
+Threads num is 144
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.070129s
+Threads num is 146
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0918646s
+Threads num is 146
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0863642s
+Threads num is 146
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.28822s
+Threads num is 146
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.308382s
+Threads num is 146
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.32386s
+Threads num is 146
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.471586s
+Threads num is 146
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.065447s
+Threads num is 148
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0669069s
+Threads num is 148
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0984808s
+Threads num is 148
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.198189s
+Threads num is 148
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.269639s
+Threads num is 148
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.324147s
+Threads num is 148
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.49947s
+Threads num is 148
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.116557s
+Threads num is 150
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0764261s
+Threads num is 150
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.116608s
+Threads num is 150
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.142092s
+Threads num is 150
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.371586s
+Threads num is 150
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.320326s
+Threads num is 150
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.647667s
+Threads num is 150
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.107012s
+Threads num is 152
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.062506s
+Threads num is 152
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.101338s
+Threads num is 152
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.136334s
+Threads num is 152
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.205047s
+Threads num is 152
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.376451s
+Threads num is 152
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.71126s
+Threads num is 152
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0807244s
+Threads num is 154
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0589828s
+Threads num is 154
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0861169s
+Threads num is 154
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.17661s
+Threads num is 154
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.252417s
+Threads num is 154
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.42619s
+Threads num is 154
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.67478s
+Threads num is 154
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0509654s
+Threads num is 156
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0799738s
+Threads num is 156
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0918838s
+Threads num is 156
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.19888s
+Threads num is 156
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.266218s
+Threads num is 156
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.400058s
+Threads num is 156
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.487245s
+Threads num is 156
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.103845s
+Threads num is 158
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0734412s
+Threads num is 158
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0911536s
+Threads num is 158
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.176475s
+Threads num is 158
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.330941s
+Threads num is 158
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.410612s
+Threads num is 158
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.599892s
+Threads num is 158
+Rank is 1399
+GAUSS 200x200
+----------------------------------
+Time in seconds=0.0644168s
+Threads num is 160
+Rank is 199
+GAUSS 400x400
+----------------------------------
+Time in seconds=0.0976042s
+Threads num is 160
+Rank is 399
+GAUSS 600x600
+----------------------------------
+Time in seconds=0.0920124s
+Threads num is 160
+Rank is 599
+GAUSS 800x800
+----------------------------------
+Time in seconds=0.174287s
+Threads num is 160
+Rank is 799
+GAUSS 1000x1000
+----------------------------------
+Time in seconds=0.270879s
+Threads num is 160
+Rank is 999
+GAUSS 1200x1200
+----------------------------------
+Time in seconds=0.406784s
+Threads num is 160
+Rank is 1199
+GAUSS 1400x1400
+----------------------------------
+Time in seconds=0.541353s
+Threads num is 160
+Rank is 1399
+
+
+PS:
+
+Read file <./result/my_job.816270.err> for stderr output of this job.
+
