@@ -23,13 +23,18 @@ int rank;
 int main(int argc,char **argv) {
 	double time0, time1;
 	int i, j, k, threads = omp_get_num_procs();
-	if(argc < 2) {
+	if(argc < 3) {
 		printf("Error exec. Not enough args "); exit(1);
 	}
 	i=sscanf(argv[1],"%d", &N);
 	if(i<1) {
-		printf("Wrong run. Try ./test N"); exit(2);
+		printf("Wrong run. Try ./test N threads"); exit(2);
 	}
+	i=sscanf(argv[2],"%d", &threads);
+	if(i<1) {
+		printf("Wrong run. Try ./test N threads"); exit(2);
+	}
+	
 	omp_set_num_threads(threads);
 	/* create arrays */
 	A=(float *)malloc(N*(N+1)*sizeof(float));
