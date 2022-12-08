@@ -1,0 +1,135 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc} % кодировка utf8
+\usepackage[english,russian]{babel}
+\usepackage{mathtext} % кириллица в формулах \text{}
+\usepackage{amsmath} % пробелы между слов в \text{}
+\usepackage{indentfirst} % красная строка
+\usepackage{graphicx} % отображение картинок
+\usepackage{subfigure} % отображение коллажа картинок
+\usepackage{amssymb} % отображение математической нотации
+\usepackage{multirow} % для разделения строк в таблицах
+\usepackage{hhline} % для таблиц \hhline{...}
+\usepackage{array} % для таблиц m{...}
+\usepackage[table]{xcolor} % раскраска ячеек таблицы
+% \usepackage[nottoc,notlot,notlof]{tocbibind} % для отображения списка литературы в содержании
+\usepackage{setspace} % интервал между строк
+\usepackage[
+    left=30mm, right=20mm,
+    top=20mm, bottom=20mm,
+    bindingoffset=0mm
+    ]{geometry} % настройка границ документа
+\linespread{1.5}
+\usepackage{fancyhdr}
+\usepackage{ccaption}
+\usepackage{hyperref} % гиперссылки по тексту
+\usepackage{amsfonts} % \mathbb{...}
+\usepackage{algorithm2e}
+\usepackage{amsthm}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+}
+
+\addto\captionsrussian{\def\refname{Литература}}
+
+
+
+\begin{document}
+
+\section{Теория}
+
+\subsection{$\cap, \cup$}
+
+\begin{itemize}
+    \item $\cap\sim\min\left(\mu_A(u), \mu_B(u)\right)$;
+    \item $\cup\sim\max\left(\mu_A(u), \mu_B(u)\right)$;
+\end{itemize}
+
+\subsection{Свойства алгебры}
+
+\begin{enumerate}
+    \item $A\cap B = B\cap A, A\cup B=B\cup A$(коммутативность);
+    \item $(A\cap B)\cap C = A\cap(B\cap C), (A\cup B)\cup C = A\cup(B\cup C)$(ассоциативность);
+    \item $A\cap A=A, A\cup A = A$(идемпотентность);
+    \item $\overline{(\overline{A})}=A$(инволюция);
+    \item $A\cap(B\cup C) = (A\cap B)\cup(A\cap C)$(дистрибутивность относительно пересечения);
+    \item $A\cup(B\cap C) = (A\cup B)\cap(A\cup C)$(дистрибутивность относительно объединения);
+    \item $\overline{A\cap B}=\overline{A}\cup\overline{B}$(правила де Моргана);
+    \item $\overline{A\cup B}=\overline{A}\cap\overline{B}$;
+    \item $A\cap\emptyset=\emptyset, A\cup\emptyset=A$(операции с пустым множеством);
+    \item $A\cap U=A,A\cup U = U$(операции с универсальным множеством);
+    \item $A\cap\overline{A}=\emptyset, A\cup\overline{A}= U$(операции с дополнением).
+\end{enumerate}
+
+\subsection{$T_l, T_d$}
+
+\begin{itemize}
+    \item $T_l(\mu_a, \mu_b) = \max\{0, \mu_a+\mu_b-1\}$;
+    \item $T_d(\mu_a, \mu_b) =
+\begin{cases}
+\mu_a &, \text{если }\mu_b=1\\
+\mu_b &, \text{если }\mu_a=1\\
+0 &,  \text{в других случаях}\\
+\end{cases}$
+\end{itemize}
+
+\subsection{$\perp_l, \perp_d$}
+
+\begin{itemize}
+    \item $\perp_l(\mu_a, \mu_b) = min( \mu_a+\mu_b, 1)$;
+    \item $\perp_d(\mu_a, \mu_b) =
+\begin{cases}
+\mu_a &, \text{если }\mu_b=0\\
+\mu_b &, \text{если }\mu_a=0\\
+1 &,  \text{в других случаях}\\
+\end{cases}$  
+\end{itemize}
+
+\section{Домашнее задание}
+
+\begin{enumerate}
+    \item Проверить свойства алгебры $\mathcal{A}_l=\left<\mathcal{F}(U); c, T_l, \perp_l\right>$; 
+    \item Проверить свойства алгебры $\mathcal{A}_d=\left<\mathcal{F}(U); c, T_d, \perp_d\right>$; 
+    \item Проверить выполнение свойства: $A*\left(B\cap C\right) = A*B\cap A*C$;
+    \item Проверить выполнение свойства: $A*\left(B\cup C\right) = A*B\cup A*C$;
+    \item Проверить выполнение свойства: $A \hat{+}\left(B\cap C\right) = A\hat{+}B\cap A\hat{+}C$;
+    \item Проверить выполнение свойства: $A \hat{+}\left(B\cup C\right) = A\hat{+}B\cup A\hat{+}C$;
+\end{enumerate}
+
+\subsection{Проверить свойства алгебры $\mathcal{A}_l=\left<\mathcal{F}(U); c, T_l, \perp_l\right>$}
+
+\begin{enumerate}
+    \item Коммутативность очевидна;
+    \item Ассоциативность(для $\perp_l$ так же): $\max\{0, \mu_a+\max\{0, \mu_b+\mu_c-1\}-1\} =$ 
+    
+    $= \max\{0, \max\{0, \mu_a+\mu_b-1\}+\mu_c-1\}$:
+        \begin{proof}
+            \begin{enumerate}
+                \item $a = \mu_a, b=\mu_b, c=\mu_c => \max\{0, \mu_a+\max\{0, \mu_b+\mu_c-1\}-1\}=\max\{0, a+\max\{0, b+c-1\}-1\}$;
+                \item $\max\{0, a+b-1\}=\max\{1, a+b\}-1$
+                \item $b+c-1\ge0$:
+                    \begin{itemize}
+                        \item $a+b-1\ge0 => \max\{1, a+\max\{0, b+c-1\}\}-1=\max\{2, a+b+c\}-2=\max\{1, \max\{0, a+b-1\}+c\}-1$;
+                        \item $a+b-1<0 =>  \max\{0, a+\max\{0, b+c-1\}-1\}=\max\{0, a+b+c-2\}=|a+b-1<0; c\le1|=0=\max\{0, c-1\}=\max\{0, \max\{0, a+b-1\}+c-1\}$;
+                    \end{itemize}
+                \item $b+c-1<0$ аналогично.
+            \end{enumerate}
+        \end{proof}
+    \item Идемпотентность: $\mu_a=\max\{0, \mu_a+\mu_a-1\} \Leftrightarrow \mu_a = 0 \text{ или } \mu_a = 1$(\textbf{не выполняется});
+    \item Инволюция: $1-(1-\max\{0, \mu_a-1\})=\max\{0, \mu_a-1\}$;
+    \item Дистрибутивность: $\min\{a+\max\{0, b+c-1\}, 1\} = \max\{0, \min\{a+b, 1\}+\min\{a+c, 1\}-1\}$:
+        \begin{itemize}
+            \item $a+b, a+c, b+c > 1 \Rightarrow \min\{a+b+c-1, 1\}=1$, но если $a=0.5, b=0.6, c=0.6, a+b+c-1=0.7\neq1$.
+        \end{itemize}
+        (\textbf{не выполняется}).
+    \item де Морган: $1-\min\{a+b, 1\}=\max\{1-a-b, 0\}=$
+    
+    $=\max\{0, 1-a+1-b-1\}$;(\textbf{выполняется});
+    \item Пустое множество: $\min\{a+1, 1\}=1$;
+\end{enumerate}
+
+
+\end{document}
